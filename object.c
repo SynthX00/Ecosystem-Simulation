@@ -23,49 +23,9 @@ ObjectPointer NewObject(char* s, int x, int y, int tProc, int tStarve){
                 nObject->timeStarveLeft = tStarve;
             }
         }
-
-        nObject->next = NULL;
     }
 
     return nObject;
-}
-
-ObjectPointer AppendObject(ObjectPointer head, ObjectPointer obj){
-
-    ObjectPointer aux = head;
-    if (aux == NULL){
-        return obj;
-    }else{
-
-        while (aux->next != NULL){
-            
-            aux = aux->next;
-        }
-        aux->next = obj;
-    }
-
-    return head;
-}
-
-void DeleteObject(ObjectPointer head, char* name, int x, int y){
-
-    ObjectPointer aux = head;
-    ObjectPointer prev = NULL;
-    
-    if(aux == NULL) return;
-    if(strcmp(aux->name, name) == 0 && aux->posX == x && aux->posY == y){
-        
-    }
-    while (next != NULL){
-
-        if(strcmp(next->name, name) == 0 && next->posX == x && next->posY == y){
-            break;
-        }
-        aux = next;
-        next = aux->next;
-    }
-    aux->next = next->next;
-    free(next);
 }
 
 void PrintObject(ObjectPointer obj){
@@ -85,7 +45,7 @@ void PrintObject(ObjectPointer obj){
     printf("\n");
 }
 
-void PrintObjectList(ObjectPointer head){
+/* void PrintObjectList(ObjectPointer head){
 
     if(head != NULL){
         ObjectPointer aux = head;
@@ -97,4 +57,4 @@ void PrintObjectList(ObjectPointer head){
     }else{
         printf("List is Empty.\n");
     }
-}
+} */

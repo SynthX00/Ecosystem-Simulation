@@ -1,9 +1,3 @@
-/*
-
-    PERGUNTAR AO STOR O FACTO DO X E O Y ESTAREM INVERTIDOS
-
-*/
-
 #include "stdlib.h"
 #include "stdio.h"
 #include "object.h"
@@ -41,6 +35,10 @@ void PrintWorldMatrix(int** world, int r, int c){
     printf("\n");
 }
 
+void UpdateWorld(ObjectPointer worldObjects, int** world){
+
+}
+
 int main(){
 
     int GEN_PROC_RABBITS;   //number of gens 'till rabbit can procreate
@@ -68,7 +66,7 @@ int main(){
         }                                   //1     -> cell has a rabbit
     }                                       //2     -> cell has a fox
 
-    ObjectPointer worldObjects = NULL;
+    ObjectPointer worldObjects = (ObjectPointer)malloc(N * sizeof(Object));
     for (int i = 0; i < N; i++){
         
         char _name[6];
@@ -77,31 +75,22 @@ int main(){
         scanf("%s %d %d", _name, &_posX, &_posY);
         
         ObjectPointer _obj = NULL;
-        if(strcmp(_name, "RABBIT") == 0)
-            _obj = NewObject(_name, _posY, _posX, GEN_PROC_RABBITS,0);
+        if(strcmp(_name, "FOX") == 0)
+            worldObjects[i] = NewObject(_name, _posY, _posX, GEN_PROC_FOXES,GEN_FOOD_FOXES);
         else
-            _obj = NewObject(_name, _posY, _posX, GEN_PROC_FOXES,GEN_FOOD_FOXES);
-        
+            worldObjects[i] = NewObject(_name, _posY, _posX, GEN_PROC_RABBITS,0);
+        /* 
         if (strcmp(_name, "ROCK") == 0)
             world[_posX][_posY] = -1;
         else if(strcmp(_name, "RABBIT") == 0)
             world[_posX][_posY] = 1;
         else
             world[_posX][_posY] = 2;
-        
-        worldObjects = AppendObject(worldObjects, _obj);
+         */
+        //worldObjects[i] = AppendObject(worldObjects, _obj);
     }
 
-    //testestestestetsetsetsetestsetsetestsetsetsetsetsetsetsetseestsetset
-    /* ObjectPointer aux = worldObjects;
-    while (aux != NULL)
-    {
-        if(strcmp(aux->name, "FOX") == 0){
-            FoxTurn(aux, world, R, C, 0, worldObjects);
-        }
-        aux = aux->next;
-    } */
-    //testestestestetsetsetsetestsetsetestsetsetsetsetsetsetsetseestsetset
+    UpdateWorld(worldObjects, world); // Update world map
 
     //main loop
     for(int genCount = 0; genCount < N_GEN; genCount++){
