@@ -1,6 +1,6 @@
 #include "fox.h"
 
-void FoxTurn(ObjectPointer fox, int** world, int worldHeigth, int worldWidth, int currentGen, ObjectPointer worldObjects){
+void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, int currentGen, ObjectPointer worldObjects){
 
     int possibleDir[4]; //pos0 -> north..pos1 -> east..pos2 -> south..pos3 -> west
                         // 0 - empty
@@ -57,7 +57,7 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeigth, int worldWidth, in
     }
 
     //south
-    if (fox->posY == worldHeigth-1){
+    if (fox->posY == worldHeight-1){
         possibleDir[2] = -1;
     }
     else{
@@ -172,7 +172,7 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeigth, int worldWidth, in
     fox->age++;    
 }
 
-void MoveFox(ObjectPointer fox, ObjectPointer worldObjects, int direction, int eat){
+/* void MoveFox(ObjectPointer fox, ObjectPointer worldObjects, int direction, int eat){
 
     fox->timeProcLeft--;
     if (fox->timeProcLeft == 0){
@@ -189,4 +189,4 @@ void MoveFox(ObjectPointer fox, ObjectPointer worldObjects, int direction, int e
         
     }
     
-}
+} */

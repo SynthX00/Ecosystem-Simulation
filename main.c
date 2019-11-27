@@ -1,6 +1,15 @@
+/*
+27-11-19
+CC4014 - Computer Science, Parallel Computing (2)
+Ecosystem Simulation
+Daniel Rangel up201908562
+daniel.rangel96@outlook.com
+*/
+
 #include "stdlib.h"
 #include "stdio.h"
 #include "object.h"
+#include "rabbit.h"
 #include "fox.h"
 
 void PrintWorldMatrix(int** world, int r, int c){
@@ -35,8 +44,26 @@ void PrintWorldMatrix(int** world, int r, int c){
     printf("\n");
 }
 
-void UpdateWorld(ObjectPointer worldObjects, int** world){
+void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size){
 
+    //Clean World
+    for (int i = 0; i < r; i++){
+        for (int j = 0; j < c; j++){
+            world[i][j] = 0;
+        }
+    }
+    
+    //Insert Updated Positions
+    for (int i = 0; i < size; i++){
+        if(worldObjects[i].isDead != 1){
+            if (strcmp(worldObjects[i].name, "ROCK") == 0)
+                world[worldObjects[i].posX][worldObjects[i].posY] = -1;
+            else if(strcmp(worldObjects[i].name, "RABBIT") == 0)
+                world[worldObjects[i].posX][worldObjects[i].posY] = 1;
+            else
+                world[worldObjects[i].posX][worldObjects[i].posY] = 2;
+        }
+    } 
 }
 
 int main(){
@@ -66,7 +93,7 @@ int main(){
         }                                   //1     -> cell has a rabbit
     }                                       //2     -> cell has a fox
 
-    ObjectPointer worldObjects = (ObjectPointer)malloc(N * sizeof(Object));
+    ObjectPointer worldObjects = malloc(N * sizeof(Object));
     for (int i = 0; i < N; i++){
         
         char _name[6];
@@ -76,21 +103,14 @@ int main(){
         
         ObjectPointer _obj = NULL;
         if(strcmp(_name, "FOX") == 0)
-            worldObjects[i] = NewObject(_name, _posY, _posX, GEN_PROC_FOXES,GEN_FOOD_FOXES);
+            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES);
         else
-            worldObjects[i] = NewObject(_name, _posY, _posX, GEN_PROC_RABBITS,0);
-        /* 
-        if (strcmp(_name, "ROCK") == 0)
-            world[_posX][_posY] = -1;
-        else if(strcmp(_name, "RABBIT") == 0)
-            world[_posX][_posY] = 1;
-        else
-            world[_posX][_posY] = 2;
-         */
-        //worldObjects[i] = AppendObject(worldObjects, _obj);
+            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_RABBITS,0);
+        
+        //PrintObject(&worldObjects[i]);
     }
 
-    UpdateWorld(worldObjects, world); // Update world map
+    UpdateWorld(world, R, C, worldObjects, N); // Update world map
 
     //main loop
     for(int genCount = 0; genCount < N_GEN; genCount++){
@@ -104,6 +124,6 @@ int main(){
     }
     
     PrintWorldMatrix(world, R, C);
-    PrintObjectList(worldObjects);
+    PrintObjectList(worldObjects, N);
     return 0;
 }
