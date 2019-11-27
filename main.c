@@ -76,6 +76,7 @@ int main(){
     int C;                  //... columns
     int N;                  //number of initial objects in the ecosystem
 
+
     scanf("%d %d %d %d %d %d %d", &GEN_PROC_RABBITS, &GEN_PROC_FOXES, &GEN_FOOD_FOXES, &N_GEN, &R, &C, &N);
 
     //create world matrix
@@ -93,7 +94,13 @@ int main(){
         }                                   //1     -> cell has a rabbit
     }                                       //2     -> cell has a fox
 
-    ObjectPointer worldObjects = malloc(N * sizeof(Object));
+    ObjectPointer worldObjects = malloc((N*2) * sizeof(Object));
+    int objectsArraySize = N*2;
+    for (int i = 0; i < objectsArraySize; i++){
+        
+        worldObjects[i] = InitObject();
+    }
+    
     for (int i = 0; i < N; i++){
         
         char _name[6];

@@ -1,5 +1,22 @@
 #include "object.h"
 
+Object InitObject(){
+
+    Object emptyObject;
+    char *s = "EMPTY";
+    memcpy(emptyObject.name,s,6*sizeof(char));
+    emptyObject.posX = -1;
+    emptyObject.posY = -1;
+    emptyObject.isDead = -1;
+    emptyObject.timeToProc = -1;
+    emptyObject.timeProcLeft = -1;
+    emptyObject.age = -1;
+    emptyObject.timeToStarve = -1;
+    emptyObject.timeStarveLeft = -1;
+
+    return emptyObject;
+}
+
 Object NewObject(char* s, int x, int y, int tProc, int tStarve){
 
     Object newObject;

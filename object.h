@@ -15,6 +15,7 @@ struct Object{
 
 typedef struct Object Object, *ObjectPointer;
 
+Object InitObject();
 Object NewObject(char* s, int x, int y, int tProc, int tStarve);
 
 void PrintObject(ObjectPointer obj);
