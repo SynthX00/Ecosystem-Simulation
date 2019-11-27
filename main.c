@@ -20,7 +20,7 @@ void PrintWorldMatrix(int** world, int r, int c){
     for (int i = 0; i < r; i++){
         printf("|");
         for (int j = 0; j < c; j++){
-            switch (world[i][j])
+            switch (world[j][i])
             {
             case -1:
                 printf("*");
@@ -99,7 +99,7 @@ int main(){
         char _name[6];
         int _posX, _posY;
         
-        scanf("%s %d %d", _name, &_posX, &_posY);
+        scanf("%s %d %d", _name, &_posY, &_posX);
         
         ObjectPointer _obj = NULL;
         if(strcmp(_name, "FOX") == 0)
@@ -111,6 +111,15 @@ int main(){
     }
 
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
+
+    for (int i = 0; i < N; i++)
+    {
+        if (strcmp(worldObjects[i].name, "RABBIT") == 0){
+            
+            RabbitTurn(&worldObjects[i],world,R,C,N_GEN);
+        }
+    }
+    
 
     //main loop
     for(int genCount = 0; genCount < N_GEN; genCount++){
@@ -124,6 +133,6 @@ int main(){
     }
     
     PrintWorldMatrix(world, R, C);
-    PrintObjectList(worldObjects, N);
+    //PrintObjectList(worldObjects, N);
     return 0;
 }

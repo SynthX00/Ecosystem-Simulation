@@ -4,11 +4,18 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
 
     //Are there empty cells around?
     int availableCellCount;
-    int* availableCells = CheckCells(rabbit, world,worldHeight, worldWidth, &availableCellCount);
+    int availableCells[4];
+    CheckCells(rabbit, world,worldHeight, worldWidth, availableCells, &availableCellCount);
 
     //If cells are available, Move to an empty cell according to the common criteria
     if(availableCellCount > 0){
         //Move
+        printf("Rabbit %d:%d -- ", rabbit->posX, rabbit->posY);
+        for (int i = 0; i < availableCellCount; i++)
+        {
+            printf("%d ", availableCells[i]);
+        }
+        printf("\n");
     }
 
     //Endturn
@@ -16,15 +23,15 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     rabbit->timeProcLeft--;
 }
 
-int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outCellCount){
+int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
 
-    int hasEmptyCells[4];
+    //int outAvailableCells = malloc(4*sizeof(int));
     int index = 0;
 
     //north
     if(rabbit->posY > 0){
         if(world[rabbit->posX][rabbit->posY-1] == 0){
-            hasEmptyCells[index] = 0;
+            outAvailableCells[index] = 0;
             index++;
         }
     }
@@ -32,7 +39,7 @@ int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     //east
     if(rabbit->posX < worldWidth-1){
         if(world[rabbit->posX+1][rabbit->posY] == 0){
-            hasEmptyCells[index] = 1;
+            outAvailableCells[index] = 1;
             index++;
         }
     }
@@ -40,7 +47,7 @@ int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     //south
     if(rabbit->posY < worldHeight-1){
         if(world[rabbit->posX][rabbit->posY+1] == 0){
-            hasEmptyCells[index] = 2;
+            outAvailableCells[index] = 2;
             index++;
         }
     }
@@ -48,11 +55,11 @@ int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     //west
     if(rabbit->posX > 0){
         if(world[rabbit->posX-1][rabbit->posY] == 0){
-            hasEmptyCells[index] = 3;
+            outAvailableCells[index] = 3;
             index++;
         }
     }
 
     *outCellCount = index++;
-    return hasEmptyCells;
+    return outAvailableCells;
 }
