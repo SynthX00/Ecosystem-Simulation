@@ -44,15 +44,15 @@ Object NewObject(char* s, int x, int y, int tProc, int tStarve, int startingAge)
 
 void PrintObject(ObjectPointer obj){
 
-    printf("NAME:%s POS:%d::%d\n", obj->name, obj->posX, obj->posY);
-    printf("Is Dead? %s\n", obj->isDead == 0?"No":"Yes");
+    printf("Name:%s Position:%d::%d\n", obj->name, obj->posX, obj->posY);
+    printf("Dead: %s\n", obj->isDead == 0?"No":"Yes");
     if(strcmp(obj->name, "ROCK") != 0){
 
-        printf("PROCLEFT:%d AGE:%d\n", obj->timeProcLeft, obj->age);
+        printf("ProcLeft:%d Age:%d\n", obj->timeProcLeft, obj->age);
         
         if (strcmp(obj->name, "FOX") == 0){
 
-            printf("FOODLEFT:%d\n", obj->timeStarveLeft);
+            printf("FoodLeft:%d\n", obj->timeStarveLeft);
         }
         
     }
@@ -63,7 +63,7 @@ void PrintObjectList(ObjectPointer worldObjects, int size, int all){
 
     for (int i = 0; i < size; i++){
         if(all == 0){
-            if(strcmp(worldObjects[i].name, "EMPTY") != 0)
+            if(strcmp(worldObjects[i].name, "EMPTY") != 0 && worldObjects[i].isDead == 0)
                 PrintObject(&worldObjects[i]);
         }
         else

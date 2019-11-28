@@ -5,7 +5,7 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     //Are there empty cells around?
     int availableCellCount;
     int availableCells[4];
-    CheckCells(rabbit, world,worldHeight, worldWidth, availableCells, &availableCellCount);
+    RabbitCheckCells(rabbit, world,worldHeight, worldWidth, availableCells, &availableCellCount);
 
     //If cells are available, Move to an empty cell according to the common criteria
     if(availableCellCount > 0){
@@ -20,7 +20,7 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
         printf("\n"); */
         
         if(rabbit->age > 0)
-            Move(rabbit, availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)], worldObjects, outCurrentObjectIndex);
+            RabbitMove(rabbit, availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)], worldObjects, outCurrentObjectIndex);
     }
 
     //Endturn
@@ -29,7 +29,7 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     rabbit->timeProcLeft = rabbit->timeProcLeft <= 0 ? 0 : rabbit->timeProcLeft;
 }
 
-int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
+void RabbitCheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
 
     //int outAvailableCells = malloc(4*sizeof(int));
     int index = 0;
@@ -67,13 +67,12 @@ int* CheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     }
 
     *outCellCount = index++;
-    return outAvailableCells;
 }
 
-void Move(ObjectPointer rabbit, int direction, ObjectPointer worldObjects, int* outCurrentObjectIndex){
+void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects, int* outCurrentObjectIndex){
     
     //check if will procreate in this move
-    if(rabbit->timeProcLeft == 0){
+    if(rabbit->timeProcLeft <= 0){
         //create new rabbit
         worldObjects[*outCurrentObjectIndex] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
         (*outCurrentObjectIndex)++;
@@ -95,15 +94,17 @@ void Move(ObjectPointer rabbit, int direction, ObjectPointer worldObjects, int* 
         rabbit->posX--;
         break;
     }
+
+    //printf("Rabbit new position %d::%d\n", rabbit->posX, rabbit->posY);
 }
 
 ///The Rabbit that has to wait longer to procreate will die off
-void CheckConflicts(ObjectPointer rabbit, ObjectPointer worldObjects, int size){
+void RabbitCheckConflicts(ObjectPointer rabbit, ObjectPointer worldObjects, int size){
     
     for (int i = 0; i < size; i++){
         
         if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posX == rabbit->posY) && worldObjects[i].isDead == 0){
-            if (worldObjects[i].timeProcLeft > rabbit->timeProcLeft){
+            if (worldObjects[i].timeProcLeft >= rabbit->timeProcLeft){
                 worldObjects[i].isDead = 1;
             }
         }
