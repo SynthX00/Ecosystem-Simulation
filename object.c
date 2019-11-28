@@ -17,7 +17,7 @@ Object InitObject(){
     return emptyObject;
 }
 
-Object NewObject(char* s, int x, int y, int tProc, int tStarve){
+Object NewObject(char* s, int x, int y, int tProc, int tStarve, int startingAge){
 
     Object newObject;
 
@@ -25,12 +25,12 @@ Object NewObject(char* s, int x, int y, int tProc, int tStarve){
     newObject.posX = x;
     newObject.posY = y;
     newObject.isDead = 0;
-
+    
     if(strcmp(s, "ROCK") != 0){
 
         newObject.timeToProc = tProc;
         newObject.timeProcLeft = tProc;
-        newObject.age = 0;
+        newObject.age = startingAge;
 
         if (strcmp(s, "FOX") == 0){
             
@@ -59,10 +59,14 @@ void PrintObject(ObjectPointer obj){
     printf("\n");
 }
 
-void PrintObjectList(ObjectPointer worldObjects, int size){
+void PrintObjectList(ObjectPointer worldObjects, int size, int all){
 
     for (int i = 0; i < size; i++){
-
-        PrintObject(&worldObjects[i]);
+        if(all == 0){
+            if(strcmp(worldObjects[i].name, "EMPTY") != 0)
+                PrintObject(&worldObjects[i]);
+        }
+        else
+            PrintObject(&worldObjects[i]);
     }
 }

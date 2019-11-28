@@ -10,17 +10,17 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     //If cells are available, Move to an empty cell according to the common criteria
     if(availableCellCount > 0){
         //Move
-        
-        printf("Rabbit %d:%d -- ", rabbit->posX, rabbit->posY);
+
+        /* printf("Rabbit %d:%d -- ", rabbit->posX, rabbit->posY);
         for (int i = 0; i < availableCellCount; i++)
         {
             printf("%d ", availableCells[i]);
         }
         printf("\nGO DIR -> %d\n\n",availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)]);
-        printf("\n");
-
+        printf("\n"); */
         
-        Move(rabbit, availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)], worldObjects, outCurrentObjectIndex);
+        if(rabbit->age > 0)
+            Move(rabbit, availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)], worldObjects, outCurrentObjectIndex);
     }
 
     //Endturn
@@ -75,9 +75,8 @@ void Move(ObjectPointer rabbit, int direction, ObjectPointer worldObjects, int* 
     //check if will procreate in this move
     if(rabbit->timeProcLeft == 0){
         //create new rabbit
-        worldObjects[*outCurrentObjectIndex] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0);
-        *outCurrentObjectIndex++;
-
+        worldObjects[*outCurrentObjectIndex] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
+        (*outCurrentObjectIndex)++;
         rabbit->timeProcLeft = rabbit->timeToProc;
     }
 
@@ -95,5 +94,18 @@ void Move(ObjectPointer rabbit, int direction, ObjectPointer worldObjects, int* 
     case 3:
         rabbit->posX--;
         break;
+    }
+}
+
+///The Rabbit that has to wait longer to procreate will die off
+void CheckConflicts(ObjectPointer rabbit, ObjectPointer worldObjects, int size){
+    
+    for (int i = 0; i < size; i++){
+        
+        if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posX == rabbit->posY) && worldObjects[i].isDead == 0){
+            if (worldObjects[i].timeProcLeft > rabbit->timeProcLeft){
+                worldObjects[i].isDead = 1;
+            }
+        }
     }
 }

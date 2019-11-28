@@ -55,7 +55,7 @@ void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size
     
     //Insert Updated Positions
     for (int i = 0; i < size; i++){
-        if(worldObjects[i].isDead != 1){
+        if(worldObjects[i].isDead != 1 && strcmp(worldObjects[i].name, "EMPTY") != 0){
             if (strcmp(worldObjects[i].name, "ROCK") == 0)
                 world[worldObjects[i].posX][worldObjects[i].posY] = -1;
             else if(strcmp(worldObjects[i].name, "RABBIT") == 0)
@@ -140,37 +140,43 @@ int main(){
         
         ObjectPointer _obj = NULL;
         if(strcmp(_name, "FOX") == 0)
-            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES);
+            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES,1);
         else
-            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_RABBITS,0);
+            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_RABBITS,0,1);
     }
 
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
     worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
 
-    //test stuff
-    for (int i = 0; i < N; i++){
-        
-        if (strcmp(worldObjects[i].name, "RABBIT") == 0){
-            RabbitTurn(&worldObjects[i],world,R,C,0, worldObjects, &currentObjectsCount);
-        }
-    }
-    
-    UpdateWorld(world, R, C, worldObjects, N); // Update world map
-    worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
 
     //main loop
     for(int genCount = 0; genCount < N_GEN; genCount++){
         
         //rabbits play 1st
+        for (int i = 0; i < objectsArraySize; i++){
+            if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
+                RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
+            }
+        }
+
+        for (int i = 0; i < objectsArraySize; i++){
+            if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
+                CheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
+            }
+        }
+
+        UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
         
 
         //foxes play 2nd
         //foxes try to eat if there's nothing to eat they'll move
 
+        PrintWorldMatrix(world, R, C);
+        //verify if there's any need to expand the object array
+        worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
     }
     
     PrintWorldMatrix(world, R, C);
-    //PrintObjectList(worldObjects, objectsArraySize);
+    //PrintObjectList(worldObjects, objectsArraySize,0);
     return 0;
 }
