@@ -171,12 +171,14 @@ int main(){
         //foxes play 2nd
         //foxes try to eat if there's nothing to eat they'll move
 
+
+        printf("\nGen %d\n", genCount+1);
         PrintWorldMatrix(world, R, C);
         //verify if there's any need to expand the object array
         worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
     }
     
-    PrintWorldMatrix(world, R, C);
+    //PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,0);
     return 0;
 }
