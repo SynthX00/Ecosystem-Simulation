@@ -66,6 +66,35 @@ void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size
     } 
 }
 
+ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPointer worldObjects, int size, int *outNewSize){
+
+    //if the array is already the max size (number of cells available) there wont be any need to expand the array
+    if (size >= (worldWidth * worldHeight))
+        return worldObjects;
+    
+    //check if more than half of the array has been ocupied
+    int count = 0;
+    for (int i = 0; i < size; i++){
+        if (strcmp(worldObjects[i].name, "EMPTY") != 0)
+            count++;
+    }
+
+    if(count>(size/2)){
+        //alloc a new array with further space for possible new objects
+        int nSize = (size*2) >= (worldWidth * worldHeight) ? (worldWidth * worldHeight) : (size*2);
+        ObjectPointer newArray = malloc(nSize * sizeof(Object));
+        memcpy(newArray, worldObjects, size * sizeof(Object));
+        for(int i = size; i < nSize; i++)
+            newArray[i] = InitObject();
+        
+        free(worldObjects);
+        *outNewSize = nSize;
+        return newArray;
+    }
+
+    return worldObjects;
+}
+
 int main(){
 
     int GEN_PROC_RABBITS;   //number of gens 'till rabbit can procreate
@@ -94,12 +123,13 @@ int main(){
         }                                   //1     -> cell has a rabbit
     }                                       //2     -> cell has a fox
 
+    //Get world objects
     ObjectPointer worldObjects = malloc((N*2) * sizeof(Object));
     int objectsArraySize = N*2;
-    for (int i = 0; i < objectsArraySize; i++){
-        
+    int currentObjectsCount = N;
+
+    for (int i = 0; i < objectsArraySize; i++)
         worldObjects[i] = InitObject();
-    }
     
     for (int i = 0; i < N; i++){
         
@@ -113,20 +143,21 @@ int main(){
             worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES);
         else
             worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_RABBITS,0);
-        
-        //PrintObject(&worldObjects[i]);
     }
 
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
+    worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
 
-    for (int i = 0; i < N; i++)
-    {
+    //test stuff
+    for (int i = 0; i < N; i++){
+        
         if (strcmp(worldObjects[i].name, "RABBIT") == 0){
-            
-            RabbitTurn(&worldObjects[i],world,R,C,N_GEN);
+            RabbitTurn(&worldObjects[i],world,R,C,0, worldObjects, &currentObjectsCount);
         }
     }
     
+    UpdateWorld(world, R, C, worldObjects, N); // Update world map
+    worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
 
     //main loop
     for(int genCount = 0; genCount < N_GEN; genCount++){
@@ -140,6 +171,6 @@ int main(){
     }
     
     PrintWorldMatrix(world, R, C);
-    //PrintObjectList(worldObjects, N);
+    //PrintObjectList(worldObjects, objectsArraySize);
     return 0;
 }
