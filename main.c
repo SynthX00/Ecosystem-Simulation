@@ -152,7 +152,7 @@ int main(){
     PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,0);
     //main loop
-    for(int genCount = 0; genCount < N_GEN; genCount++){
+    for(int genCount = 0; genCount < 1; genCount++){
         printf("\nGen %d\n", genCount+1);
 
         //rabbits play 1st
@@ -162,14 +162,14 @@ int main(){
             }
         }
 
-        /* for (int i = 0; i < objectsArraySize; i++){
+        for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
                 RabbitCheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
             }
-        } */
+        }
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
-        PrintWorldMatrix(world, R, C);
+        //PrintWorldMatrix(world, R, C);
 
         //foxes play 2nd
         for (int i = 0; i < objectsArraySize; i++){
@@ -178,21 +178,21 @@ int main(){
             }
         }
 
-        /* for (int i = 0; i < objectsArraySize; i++){
+        for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
                 FoxCheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
             }
-        } */
+        }
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
-        PrintWorldMatrix(world, R, C);
+        //PrintWorldMatrix(world, R, C);
 
-        PrintObjectList(worldObjects, objectsArraySize,0);
+        //PrintObjectList(worldObjects, objectsArraySize,0);
         //verify if there's any need to expand the object array
         worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
     }
 
-    //PrintWorldMatrix(world, R, C);
+    PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,0);
     return 0;
 }
