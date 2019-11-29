@@ -24,9 +24,11 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
     }
 
     //Endturn
+    if(rabbit->age > 0){
+        rabbit->timeProcLeft--;
+        rabbit->timeProcLeft = rabbit->timeProcLeft <= 0 ? 0 : rabbit->timeProcLeft;
+    }
     rabbit->age++;
-    rabbit->timeProcLeft--;
-    rabbit->timeProcLeft = rabbit->timeProcLeft <= 0 ? 0 : rabbit->timeProcLeft;
 }
 
 void RabbitCheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
@@ -76,7 +78,7 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
         //create new rabbit
         worldObjects[*outCurrentObjectIndex] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
         (*outCurrentObjectIndex)++;
-        rabbit->timeProcLeft = rabbit->timeToProc;
+        rabbit->timeProcLeft = rabbit->timeToProc + 1;
     }
 
     switch (direction)
