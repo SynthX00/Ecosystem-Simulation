@@ -3,6 +3,11 @@
 void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, int currentGen, ObjectPointer worldObjects, int* currentObjectIndex){
 
     //Die of starvation?
+    if(fox->timeStarveLeft <= 0){
+            fox->isDead = 1;
+            return;
+    }
+    
     if(fox->age > 0){
         fox->timeStarveLeft--;
         fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
@@ -20,10 +25,6 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, in
             FoxMove(fox, 1, availableCells[((currentGen + fox->posX + fox->posY)%availableCellCount)], worldObjects, currentObjectIndex);
     }//Else try to move to an empty space
     else{
-        if(fox->timeStarveLeft <= 0){
-            fox->isDead = 1;
-            return;
-        }
 
         FoxCheckCells(fox, 0, world, worldHeight, worldWidth, availableCells, &availableCellCount);
         if (availableCellCount > 0){
@@ -38,7 +39,7 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, in
         fox->timeProcLeft = fox->timeProcLeft <= 0 ? 0 : fox->timeProcLeft;
     }
     fox->age++;
-    
+
 }
 
 void FoxCheckCells(ObjectPointer fox, int hunt, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
@@ -89,7 +90,7 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
         worldObjects[(*outCurrentObjectIndex)] = NewObject(*outCurrentObjectIndex, "FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
         (*outCurrentObjectIndex)++;
         fox->timeProcLeft = fox->timeToProc;
-        printf("Fox Created at index %d, with the position %d::%d\n",*outCurrentObjectIndex,fox->posX,fox->posY);
+        //printf("Fox Created at index %d, with the position %d::%d\n",*outCurrentObjectIndex,fox->posX,fox->posY);
     }
 
     switch (direction)

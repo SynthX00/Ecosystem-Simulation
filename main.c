@@ -79,11 +79,11 @@ ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPoin
             count++;
     }
 
-    printf("COUNT %d-------------%d\n", count, (size/2));
+    //printf("COUNT %d-------------size div 2 %d\n", count, (size/2));
 
     if(count>(size/2)){
         //alloc a new array with further space for possible new objects
-        int nSize = (size*2) >= (worldWidth * worldHeight) ? (worldWidth * worldHeight) : (size*2);
+        int nSize = /*(size*2) >=  (worldWidth * worldHeight) ? (worldWidth * worldHeight) :  */(size*2);
         ObjectPointer newArray = malloc(nSize * sizeof(Object));
         memcpy(newArray, worldObjects, size * sizeof(Object));
         for(int i = size; i < nSize; i++)
@@ -150,14 +150,14 @@ int main(){
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
     worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
 
-    printf("Gen 0\n");
+    printf("Generation 0\n");
     PrintWorldMatrix(world, R, C);
-    PrintObjectList(worldObjects, objectsArraySize,1);
-    printf("\n%d\n", objectsArraySize);
+    //PrintObjectList(worldObjects, objectsArraySize,0);
+    //printf("\n%d\n", objectsArraySize);
 
     //main loop
-    for(int genCount = 0; genCount < 1; genCount++){
-        printf("\nGen %d\n", genCount+1);
+    for(int genCount = 0; genCount < 12; genCount++){
+        printf("\nGeneration %d\n", genCount+1);
 
         //rabbits play 1st
         for (int i = 0; i < objectsArraySize; i++){
@@ -173,7 +173,7 @@ int main(){
         }
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
-        PrintWorldMatrix(world, R, C);
+        //PrintWorldMatrix(world, R, C);
 
         //foxes play 2nd
         for (int i = 0; i < objectsArraySize; i++){
@@ -196,8 +196,10 @@ int main(){
 
         //verify if there's any need to expand the object array
         worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
+        //printf("\n%d   %d\n", objectsArraySize,currentObjectsCount);
     }
 
+    
     //PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,1);
     return 0;
