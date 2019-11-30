@@ -123,7 +123,7 @@ void FoxCheckConflicts(ObjectPointer fox, ObjectPointer worldObjects, int size){
     
     for (int i = 0; i < size; i++){
         
-        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posX == fox->posY) && worldObjects[i].isDead == 0){
+        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0){
             if (worldObjects[i].timeProcLeft > fox->timeProcLeft){
                 worldObjects[i].isDead = 1;
             }else if(worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){

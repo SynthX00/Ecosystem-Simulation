@@ -178,11 +178,11 @@ int main(){
             }
         }
 
-        for (int i = 0; i < objectsArraySize; i++){
+        /* for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
                 FoxCheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
             }
-        }
+        } */
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
         //PrintWorldMatrix(world, R, C);

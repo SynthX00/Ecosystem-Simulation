@@ -105,8 +105,9 @@ void RabbitCheckConflicts(ObjectPointer rabbit, ObjectPointer worldObjects, int 
     
     for (int i = 0; i < size; i++){
         
-        if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posX == rabbit->posY) && worldObjects[i].isDead == 0){
+        if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posY == rabbit->posY) && (worldObjects[i].isDead) == 0){
             if (worldObjects[i].timeProcLeft >= rabbit->timeProcLeft){
+                printf("rabbit %d::%d is killed\n", worldObjects[i].posX, worldObjects[i].posY);
                 worldObjects[i].isDead = 1;
             }
         }
