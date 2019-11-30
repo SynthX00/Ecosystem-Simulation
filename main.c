@@ -69,8 +69,8 @@ void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size
 ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPointer worldObjects, int size, int *outNewSize){
 
     //if the array is already the max size (number of cells available) there wont be any need to expand the array
-    if (size >= (worldWidth * worldHeight))
-        return worldObjects;
+    /* if (size >= (worldWidth * worldHeight))
+        return worldObjects; */
     
     //check if more than half of the array has been ocupied
     int count = 0;
@@ -78,6 +78,8 @@ ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPoin
         if (strcmp(worldObjects[i].name, "EMPTY") != 0)
             count++;
     }
+
+    printf("COUNT %d-------------%d\n", count, (size/2));
 
     if(count>(size/2)){
         //alloc a new array with further space for possible new objects
@@ -140,9 +142,9 @@ int main(){
         
         ObjectPointer _obj = NULL;
         if(strcmp(_name, "FOX") == 0)
-            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES,1);
+            worldObjects[i] = NewObject(i, _name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES,1);
         else
-            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_RABBITS,0,1);
+            worldObjects[i] = NewObject(i, _name, _posX, _posY, GEN_PROC_RABBITS,0,1);
     }
 
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
@@ -150,7 +152,9 @@ int main(){
 
     printf("Gen 0\n");
     PrintWorldMatrix(world, R, C);
-    //PrintObjectList(worldObjects, objectsArraySize,0);
+    PrintObjectList(worldObjects, objectsArraySize,1);
+    printf("\n%d\n", objectsArraySize);
+
     //main loop
     for(int genCount = 0; genCount < 1; genCount++){
         printf("\nGen %d\n", genCount+1);
@@ -169,7 +173,7 @@ int main(){
         }
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
-        //PrintWorldMatrix(world, R, C);
+        PrintWorldMatrix(world, R, C);
 
         //foxes play 2nd
         for (int i = 0; i < objectsArraySize; i++){
@@ -178,21 +182,23 @@ int main(){
             }
         }
 
-        /* for (int i = 0; i < objectsArraySize; i++){
+        for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
                 FoxCheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
             }
-        } */
+        }
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
-        //PrintWorldMatrix(world, R, C);
 
-        //PrintObjectList(worldObjects, objectsArraySize,0);
+        PrintWorldMatrix(world, R, C);
+        PrintObjectList(worldObjects, objectsArraySize,0);
+        
+
         //verify if there's any need to expand the object array
         worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
     }
 
-    PrintWorldMatrix(world, R, C);
-    //PrintObjectList(worldObjects, objectsArraySize,0);
+    //PrintWorldMatrix(world, R, C);
+    //PrintObjectList(worldObjects, objectsArraySize,1);
     return 0;
 }

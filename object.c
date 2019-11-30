@@ -5,6 +5,7 @@ Object InitObject(){
     Object emptyObject;
     char *s = "EMPTY";
     memcpy(emptyObject.name,s,6*sizeof(char));
+    emptyObject.index = -1;
     emptyObject.posX = -1;
     emptyObject.posY = -1;
     emptyObject.isDead = -1;
@@ -17,11 +18,12 @@ Object InitObject(){
     return emptyObject;
 }
 
-Object NewObject(char* s, int x, int y, int tProc, int tStarve, int startingAge){
+Object NewObject(int id, char* s, int x, int y, int tProc, int tStarve, int startingAge){
 
     Object newObject;
 
-    memcpy(newObject.name,s,6*sizeof(char));
+    memcpy(newObject.name,s,7*sizeof(char));
+    newObject.index = id;
     newObject.posX = x;
     newObject.posY = y;
     newObject.isDead = 0;
@@ -44,7 +46,7 @@ Object NewObject(char* s, int x, int y, int tProc, int tStarve, int startingAge)
 
 void PrintObject(ObjectPointer obj){
 
-    printf("Name:%s Position:%d::%d\n", obj->name, obj->posX, obj->posY);
+    printf("%d Name:%s Position:%d::%d\n",obj->index, obj->name, obj->posX, obj->posY);
     printf("Dead: %s\n", obj->isDead == 0?"No":"Yes");
     if(strcmp(obj->name, "ROCK") != 0){
 

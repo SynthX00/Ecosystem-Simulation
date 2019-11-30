@@ -76,7 +76,7 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
     //check if will procreate in this move
     if(rabbit->timeProcLeft <= 0){
         //create new rabbit
-        worldObjects[*outCurrentObjectIndex] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
+        worldObjects[(*outCurrentObjectIndex)] = NewObject(*outCurrentObjectIndex, "RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
         (*outCurrentObjectIndex)++;
         rabbit->timeProcLeft = rabbit->timeToProc + 1;
     }
@@ -105,9 +105,9 @@ void RabbitCheckConflicts(ObjectPointer rabbit, ObjectPointer worldObjects, int 
     
     for (int i = 0; i < size; i++){
         
-        if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posY == rabbit->posY) && (worldObjects[i].isDead) == 0){
+        if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posY == rabbit->posY) && (worldObjects[i].isDead) == 0 && (worldObjects[i].index != rabbit->index)){
             if (worldObjects[i].timeProcLeft >= rabbit->timeProcLeft){
-                printf("rabbit %d::%d is killed\n", worldObjects[i].posX, worldObjects[i].posY);
+                //printf("rabbit %d::%d is killed\n", worldObjects[i].posX, worldObjects[i].posY);
                 worldObjects[i].isDead = 1;
             }
         }

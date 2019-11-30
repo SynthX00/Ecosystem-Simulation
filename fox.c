@@ -86,9 +86,10 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
     //check if will procreate this move
     if(fox->timeProcLeft <= 0){
         //create new fox
-        worldObjects[*outCurrentObjectIndex] = NewObject("FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
+        worldObjects[(*outCurrentObjectIndex)] = NewObject(*outCurrentObjectIndex, "FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
         (*outCurrentObjectIndex)++;
         fox->timeProcLeft = fox->timeToProc;
+        printf("Fox Created at index %d, with the position %d::%d\n",*outCurrentObjectIndex,fox->posX,fox->posY);
     }
 
     switch (direction)
@@ -123,7 +124,7 @@ void FoxCheckConflicts(ObjectPointer fox, ObjectPointer worldObjects, int size){
     
     for (int i = 0; i < size; i++){
         
-        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0){
+        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0 && (worldObjects[i].index != fox->index)){
             if (worldObjects[i].timeProcLeft > fox->timeProcLeft){
                 worldObjects[i].isDead = 1;
             }else if(worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){
