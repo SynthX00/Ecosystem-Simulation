@@ -156,7 +156,7 @@ int main(){
     //printf("\n%d\n", objectsArraySize);
 
     //main loop
-    for(int genCount = 0; genCount < 12; genCount++){
+    for(int genCount = 0; genCount < N_GEN; genCount++){
         printf("\nGeneration %d\n", genCount+1);
 
         //rabbits play 1st
@@ -191,7 +191,7 @@ int main(){
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
 
         PrintWorldMatrix(world, R, C);
-        PrintObjectList(worldObjects, objectsArraySize,0);
+        //PrintObjectList(worldObjects, objectsArraySize,0);
         
 
         //verify if there's any need to expand the object array

@@ -25,158 +25,6 @@ Generation 1
 |RF F*  RRR|
 |   FR  *  |
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-10 Name:RABBIT Position:9::8
-Dead: No
-ProcLeft:1 Age:2
-
-11 Name:RABBIT Position:9::6
-Dead: No
-ProcLeft:1 Age:2
-
-12 Name:RABBIT Position:7::1
-Dead: No
-ProcLeft:1 Age:2
-
-13 Name:RABBIT Position:2::0
-Dead: No
-ProcLeft:1 Age:2
-
-14 Name:RABBIT Position:8::2
-Dead: No
-ProcLeft:1 Age:2
-
-16 Name:RABBIT Position:6::0
-Dead: No
-ProcLeft:1 Age:2
-
-18 Name:RABBIT Position:5::3
-Dead: No
-ProcLeft:1 Age:2
-
-19 Name:RABBIT Position:5::1
-Dead: No
-ProcLeft:1 Age:2
-
-20 Name:RABBIT Position:8::8
-Dead: No
-ProcLeft:1 Age:2
-
-22 Name:RABBIT Position:7::5
-Dead: No
-ProcLeft:1 Age:2
-
-23 Name:RABBIT Position:4::1
-Dead: No
-ProcLeft:1 Age:2
-
-24 Name:RABBIT Position:0::2
-Dead: No
-ProcLeft:1 Age:2
-
-25 Name:RABBIT Position:1::7
-Dead: No
-ProcLeft:1 Age:2
-
-26 Name:RABBIT Position:0::8
-Dead: No
-ProcLeft:1 Age:2
-
-29 Name:RABBIT Position:4::9
-Dead: No
-ProcLeft:1 Age:2
-
-32 Name:RABBIT Position:2::2
-Dead: No
-ProcLeft:1 Age:2
-
-33 Name:RABBIT Position:3::0
-Dead: No
-ProcLeft:1 Age:2
-
-38 Name:RABBIT Position:7::8
-Dead: No
-ProcLeft:1 Age:2
-
-40 Name:FOX Position:4::4
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-41 Name:FOX Position:8::4
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-42 Name:FOX Position:5::5
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-43 Name:FOX Position:3::8
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-44 Name:FOX Position:0::5
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-45 Name:FOX Position:3::9
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-46 Name:FOX Position:1::8
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-47 Name:FOX Position:2::6
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-48 Name:FOX Position:1::3
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
-49 Name:FOX Position:6::3
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:6
-
 
 Generation 2
 ------------
@@ -191,142 +39,6 @@ Generation 2
 |    *     |
 |RFF  R *R |
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-10 Name:RABBIT Position:9::7
-Dead: No
-ProcLeft:0 Age:3
-
-11 Name:RABBIT Position:9::5
-Dead: No
-ProcLeft:0 Age:3
-
-12 Name:RABBIT Position:7::0
-Dead: No
-ProcLeft:0 Age:3
-
-13 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:0 Age:3
-
-14 Name:RABBIT Position:8::3
-Dead: No
-ProcLeft:0 Age:3
-
-16 Name:RABBIT Position:6::1
-Dead: No
-ProcLeft:0 Age:3
-
-20 Name:RABBIT Position:8::9
-Dead: No
-ProcLeft:0 Age:3
-
-23 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:0 Age:3
-
-24 Name:RABBIT Position:0::1
-Dead: No
-ProcLeft:0 Age:3
-
-25 Name:RABBIT Position:0::7
-Dead: No
-ProcLeft:0 Age:3
-
-26 Name:RABBIT Position:0::9
-Dead: No
-ProcLeft:0 Age:3
-
-29 Name:RABBIT Position:5::9
-Dead: No
-ProcLeft:0 Age:3
-
-32 Name:RABBIT Position:3::2
-Dead: No
-ProcLeft:0 Age:3
-
-38 Name:RABBIT Position:7::7
-Dead: No
-ProcLeft:0 Age:3
-
-40 Name:FOX Position:4::3
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
-
-41 Name:FOX Position:8::5
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
-
-42 Name:FOX Position:4::5
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:5
-
-43 Name:FOX Position:3::7
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:5
-
-44 Name:FOX Position:0::4
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:5
-
-45 Name:FOX Position:2::9
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:4
-
-46 Name:FOX Position:1::9
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:4
-
-47 Name:FOX Position:2::5
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:5
-
-48 Name:FOX Position:2::3
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:5
-
-49 Name:FOX Position:6::4
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:5
-
 
 Generation 3
 ------------
@@ -341,177 +53,6 @@ Generation 3
 |R   *     |
 |F  F RR*RR|
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-10 Name:RABBIT Position:9::6
-Dead: No
-ProcLeft:2 Age:4
-
-11 Name:RABBIT Position:9::4
-Dead: No
-ProcLeft:2 Age:4
-
-12 Name:RABBIT Position:8::0
-Dead: No
-ProcLeft:2 Age:4
-
-14 Name:RABBIT Position:9::3
-Dead: No
-ProcLeft:2 Age:4
-
-16 Name:RABBIT Position:7::1
-Dead: No
-ProcLeft:2 Age:4
-
-20 Name:RABBIT Position:9::9
-Dead: No
-ProcLeft:2 Age:4
-
-23 Name:RABBIT Position:4::1
-Dead: No
-ProcLeft:2 Age:4
-
-24 Name:RABBIT Position:0::2
-Dead: No
-ProcLeft:2 Age:4
-
-25 Name:RABBIT Position:0::6
-Dead: No
-ProcLeft:2 Age:4
-
-26 Name:RABBIT Position:0::8
-Dead: No
-ProcLeft:2 Age:4
-
-29 Name:RABBIT Position:6::9
-Dead: No
-ProcLeft:2 Age:4
-
-38 Name:RABBIT Position:7::6
-Dead: No
-ProcLeft:2 Age:4
-
-40 Name:FOX Position:5::3
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:5
-
-41 Name:FOX Position:9::5
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:6
-
-42 Name:FOX Position:3::5
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:4
-
-43 Name:FOX Position:3::6
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:4
-
-44 Name:FOX Position:0::3
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:4
-
-45 Name:FOX Position:3::9
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:3
-
-46 Name:FOX Position:0::9
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:6
-
-48 Name:FOX Position:2::2
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:6
-
-49 Name:FOX Position:6::3
-Dead: No
-ProcLeft:6 Age:4
-FoodLeft:4
-
-50 Name:RABBIT Position:9::7
-Dead: No
-ProcLeft:2 Age:1
-
-52 Name:RABBIT Position:7::0
-Dead: No
-ProcLeft:2 Age:1
-
-53 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:2 Age:1
-
-54 Name:RABBIT Position:8::3
-Dead: No
-ProcLeft:2 Age:1
-
-55 Name:RABBIT Position:6::1
-Dead: No
-ProcLeft:2 Age:1
-
-56 Name:RABBIT Position:8::9
-Dead: No
-ProcLeft:2 Age:1
-
-57 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:2 Age:1
-
-58 Name:RABBIT Position:0::1
-Dead: No
-ProcLeft:2 Age:1
-
-59 Name:RABBIT Position:0::7
-Dead: No
-ProcLeft:2 Age:1
-
-61 Name:RABBIT Position:5::9
-Dead: No
-ProcLeft:2 Age:1
-
-62 Name:RABBIT Position:3::2
-Dead: No
-ProcLeft:2 Age:1
-
-63 Name:RABBIT Position:7::7
-Dead: No
-ProcLeft:2 Age:1
-
 
 Generation 4
 ------------
@@ -526,157 +67,6 @@ Generation 4
 |FR  * R RR|
 |    F  *  |
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::4
-Dead: No
-ProcLeft:1 Age:5
-
-12 Name:RABBIT Position:8::1
-Dead: No
-ProcLeft:1 Age:5
-
-14 Name:RABBIT Position:9::2
-Dead: No
-ProcLeft:1 Age:5
-
-20 Name:RABBIT Position:9::8
-Dead: No
-ProcLeft:1 Age:5
-
-23 Name:RABBIT Position:3::1
-Dead: No
-ProcLeft:1 Age:5
-
-25 Name:RABBIT Position:1::6
-Dead: No
-ProcLeft:1 Age:5
-
-26 Name:RABBIT Position:1::8
-Dead: No
-ProcLeft:1 Age:5
-
-29 Name:RABBIT Position:6::8
-Dead: No
-ProcLeft:1 Age:5
-
-38 Name:RABBIT Position:7::5
-Dead: No
-ProcLeft:1 Age:5
-
-40 Name:FOX Position:4::3
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:4
-
-41 Name:FOX Position:9::6
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:6
-
-42 Name:FOX Position:2::5
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:3
-
-43 Name:FOX Position:4::6
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:3
-
-44 Name:FOX Position:0::2
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:3
-
-45 Name:FOX Position:4::9
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:6
-
-46 Name:FOX Position:0::8
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:5
-
-48 Name:FOX Position:1::2
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:6
-
-49 Name:FOX Position:6::2
-Dead: No
-ProcLeft:5 Age:5
-FoodLeft:6
-
-50 Name:RABBIT Position:8::7
-Dead: No
-ProcLeft:1 Age:2
-
-52 Name:RABBIT Position:6::0
-Dead: No
-ProcLeft:1 Age:2
-
-53 Name:RABBIT Position:2::0
-Dead: No
-ProcLeft:1 Age:2
-
-54 Name:RABBIT Position:7::3
-Dead: No
-ProcLeft:1 Age:2
-
-56 Name:RABBIT Position:8::8
-Dead: No
-ProcLeft:1 Age:2
-
-57 Name:RABBIT Position:3::0
-Dead: No
-ProcLeft:1 Age:2
-
-58 Name:RABBIT Position:0::0
-Dead: No
-ProcLeft:1 Age:2
-
-59 Name:RABBIT Position:1::7
-Dead: No
-ProcLeft:1 Age:2
-
-62 Name:RABBIT Position:3::3
-Dead: No
-ProcLeft:1 Age:2
-
-63 Name:RABBIT Position:6::7
-Dead: No
-ProcLeft:1 Age:2
-
 
 Generation 5
 ------------
@@ -691,137 +81,6 @@ Generation 5
 |    *  R  |
 | R F   *RR|
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::3
-Dead: No
-ProcLeft:0 Age:6
-
-12 Name:RABBIT Position:9::1
-Dead: No
-ProcLeft:0 Age:6
-
-20 Name:RABBIT Position:9::9
-Dead: No
-ProcLeft:0 Age:6
-
-23 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:0 Age:6
-
-25 Name:RABBIT Position:0::6
-Dead: No
-ProcLeft:0 Age:6
-
-26 Name:RABBIT Position:1::9
-Dead: No
-ProcLeft:0 Age:6
-
-29 Name:RABBIT Position:7::8
-Dead: No
-ProcLeft:0 Age:6
-
-38 Name:RABBIT Position:7::4
-Dead: No
-ProcLeft:0 Age:6
-
-40 Name:FOX Position:3::3
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:3
-
-41 Name:FOX Position:9::7
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:5
-
-42 Name:FOX Position:1::5
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:2
-
-43 Name:FOX Position:4::7
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:2
-
-44 Name:FOX Position:0::1
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:6
-
-45 Name:FOX Position:3::9
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:5
-
-46 Name:FOX Position:0::7
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:6
-
-48 Name:FOX Position:1::3
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:5
-
-49 Name:FOX Position:6::3
-Dead: No
-ProcLeft:4 Age:6
-FoodLeft:6
-
-50 Name:RABBIT Position:7::7
-Dead: No
-ProcLeft:0 Age:3
-
-52 Name:RABBIT Position:7::0
-Dead: No
-ProcLeft:0 Age:3
-
-56 Name:RABBIT Position:8::9
-Dead: No
-ProcLeft:0 Age:3
-
-57 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:0 Age:3
-
-62 Name:RABBIT Position:3::4
-Dead: No
-ProcLeft:0 Age:3
-
-63 Name:RABBIT Position:5::7
-Dead: No
-ProcLeft:0 Age:3
-
 
 Generation 6
 ------------
@@ -836,165 +95,6 @@ Generation 6
 | R  *R RRR|
 | RF    *RR|
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::2
-Dead: No
-ProcLeft:2 Age:7
-
-12 Name:RABBIT Position:9::0
-Dead: No
-ProcLeft:2 Age:7
-
-20 Name:RABBIT Position:9::8
-Dead: No
-ProcLeft:2 Age:7
-
-23 Name:RABBIT Position:2::2
-Dead: No
-ProcLeft:2 Age:7
-
-26 Name:RABBIT Position:1::8
-Dead: No
-ProcLeft:2 Age:7
-
-29 Name:RABBIT Position:8::8
-Dead: No
-ProcLeft:2 Age:7
-
-40 Name:FOX Position:3::4
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:6
-
-41 Name:FOX Position:8::7
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:6
-
-42 Name:FOX Position:1::6
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:6
-
-43 Name:FOX Position:5::7
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:6
-
-44 Name:FOX Position:0::0
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:5
-
-45 Name:FOX Position:2::9
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:4
-
-46 Name:FOX Position:0::6
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:6
-
-48 Name:FOX Position:2::3
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:4
-
-49 Name:FOX Position:7::3
-Dead: No
-ProcLeft:3 Age:7
-FoodLeft:6
-
-52 Name:RABBIT Position:8::0
-Dead: No
-ProcLeft:2 Age:4
-
-57 Name:RABBIT Position:3::0
-Dead: No
-ProcLeft:2 Age:4
-
-62 Name:RABBIT Position:4::4
-Dead: No
-ProcLeft:2 Age:4
-
-63 Name:RABBIT Position:5::8
-Dead: No
-ProcLeft:2 Age:4
-
-64 Name:RABBIT Position:8::3
-Dead: No
-ProcLeft:2 Age:1
-
-65 Name:RABBIT Position:9::1
-Dead: No
-ProcLeft:2 Age:1
-
-66 Name:RABBIT Position:9::9
-Dead: No
-ProcLeft:2 Age:1
-
-67 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:2 Age:1
-
-69 Name:RABBIT Position:1::9
-Dead: No
-ProcLeft:2 Age:1
-
-70 Name:RABBIT Position:7::8
-Dead: No
-ProcLeft:2 Age:1
-
-71 Name:RABBIT Position:7::4
-Dead: No
-ProcLeft:2 Age:1
-
-72 Name:RABBIT Position:7::7
-Dead: No
-ProcLeft:2 Age:1
-
-73 Name:RABBIT Position:7::0
-Dead: No
-ProcLeft:2 Age:1
-
-74 Name:RABBIT Position:8::9
-Dead: No
-ProcLeft:2 Age:1
-
-75 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:2 Age:1
-
 
 Generation 7
 ------------
@@ -1009,153 +109,6 @@ Generation 7
 |    *FR F |
 |RF   R *RR|
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::1
-Dead: No
-ProcLeft:1 Age:8
-
-12 Name:RABBIT Position:9::0
-Dead: No
-ProcLeft:1 Age:8
-
-20 Name:RABBIT Position:9::7
-Dead: No
-ProcLeft:1 Age:8
-
-23 Name:RABBIT Position:3::2
-Dead: No
-ProcLeft:1 Age:8
-
-40 Name:FOX Position:4::4
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:5
-
-41 Name:FOX Position:8::8
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:6
-
-42 Name:FOX Position:1::7
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:6
-
-43 Name:FOX Position:5::8
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:5
-
-44 Name:FOX Position:0::1
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:4
-
-45 Name:FOX Position:1::9
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:3
-
-46 Name:FOX Position:0::5
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:5
-
-48 Name:FOX Position:1::3
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:3
-
-49 Name:FOX Position:7::4
-Dead: No
-ProcLeft:2 Age:8
-FoodLeft:5
-
-57 Name:RABBIT Position:2::0
-Dead: No
-ProcLeft:1 Age:5
-
-62 Name:RABBIT Position:4::5
-Dead: No
-ProcLeft:1 Age:5
-
-63 Name:RABBIT Position:5::9
-Dead: No
-ProcLeft:1 Age:5
-
-64 Name:RABBIT Position:8::4
-Dead: No
-ProcLeft:1 Age:2
-
-65 Name:RABBIT Position:9::2
-Dead: No
-ProcLeft:1 Age:2
-
-66 Name:RABBIT Position:9::9
-Dead: No
-ProcLeft:1 Age:2
-
-67 Name:RABBIT Position:3::1
-Dead: No
-ProcLeft:1 Age:2
-
-69 Name:RABBIT Position:0::9
-Dead: No
-ProcLeft:1 Age:2
-
-70 Name:RABBIT Position:6::8
-Dead: No
-ProcLeft:1 Age:2
-
-71 Name:RABBIT Position:6::4
-Dead: No
-ProcLeft:1 Age:2
-
-72 Name:RABBIT Position:7::6
-Dead: No
-ProcLeft:1 Age:2
-
-73 Name:RABBIT Position:6::0
-Dead: No
-ProcLeft:1 Age:2
-
-74 Name:RABBIT Position:8::9
-Dead: No
-ProcLeft:1 Age:2
-
-75 Name:RABBIT Position:4::1
-Dead: No
-ProcLeft:1 Age:2
-
 
 Generation 8
 ------------
@@ -1170,137 +123,6 @@ Generation 8
 |R   *    R|
 |F   RF *F |
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::0
-Dead: No
-ProcLeft:0 Age:9
-
-12 Name:RABBIT Position:9::1
-Dead: No
-ProcLeft:0 Age:9
-
-20 Name:RABBIT Position:8::7
-Dead: No
-ProcLeft:0 Age:9
-
-23 Name:RABBIT Position:4::2
-Dead: No
-ProcLeft:0 Age:9
-
-40 Name:FOX Position:5::4
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:6
-
-41 Name:FOX Position:8::9
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:6
-
-42 Name:FOX Position:1::6
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:5
-
-43 Name:FOX Position:5::9
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:4
-
-44 Name:FOX Position:0::0
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:3
-
-45 Name:FOX Position:0::9
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:2
-
-46 Name:FOX Position:0::4
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:4
-
-48 Name:FOX Position:0::3
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:2
-
-49 Name:FOX Position:7::5
-Dead: No
-ProcLeft:1 Age:9
-FoodLeft:4
-
-57 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:0 Age:6
-
-62 Name:RABBIT Position:4::6
-Dead: No
-ProcLeft:0 Age:6
-
-63 Name:RABBIT Position:4::9
-Dead: No
-ProcLeft:0 Age:6
-
-64 Name:RABBIT Position:9::4
-Dead: No
-ProcLeft:0 Age:3
-
-66 Name:RABBIT Position:9::8
-Dead: No
-ProcLeft:0 Age:3
-
-69 Name:RABBIT Position:0::8
-Dead: No
-ProcLeft:0 Age:3
-
-70 Name:RABBIT Position:6::7
-Dead: No
-ProcLeft:0 Age:3
-
-72 Name:RABBIT Position:6::6
-Dead: No
-ProcLeft:0 Age:3
-
-73 Name:RABBIT Position:6::1
-Dead: No
-ProcLeft:0 Age:3
-
-75 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:0 Age:3
-
 
 Generation 9
 ------------
@@ -1315,177 +137,6 @@ Generation 9
 |F   *    R|
 |   RF  * F|
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::1
-Dead: No
-ProcLeft:2 Age:10
-
-12 Name:RABBIT Position:9::0
-Dead: No
-ProcLeft:2 Age:10
-
-20 Name:RABBIT Position:7::7
-Dead: No
-ProcLeft:2 Age:10
-
-23 Name:RABBIT Position:3::2
-Dead: No
-ProcLeft:2 Age:10
-
-40 Name:FOX Position:6::4
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:5
-
-41 Name:FOX Position:9::9
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:6
-
-42 Name:FOX Position:0::6
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:4
-
-43 Name:FOX Position:4::9
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:6
-
-44 Name:FOX Position:0::1
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:2
-
-45 Name:FOX Position:0::8
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:6
-
-46 Name:FOX Position:1::4
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:3
-
-48 Name:FOX Position:1::3
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:1
-
-49 Name:FOX Position:7::4
-Dead: No
-ProcLeft:0 Age:10
-FoodLeft:3
-
-57 Name:RABBIT Position:2::2
-Dead: No
-ProcLeft:2 Age:7
-
-62 Name:RABBIT Position:4::7
-Dead: No
-ProcLeft:2 Age:7
-
-63 Name:RABBIT Position:3::9
-Dead: No
-ProcLeft:2 Age:7
-
-64 Name:RABBIT Position:9::3
-Dead: No
-ProcLeft:2 Age:4
-
-69 Name:RABBIT Position:0::7
-Dead: No
-ProcLeft:2 Age:4
-
-72 Name:RABBIT Position:5::6
-Dead: No
-ProcLeft:2 Age:4
-
-73 Name:RABBIT Position:5::1
-Dead: No
-ProcLeft:2 Age:4
-
-75 Name:RABBIT Position:4::1
-Dead: No
-ProcLeft:2 Age:4
-
-78 Name:RABBIT Position:8::0
-Dead: No
-ProcLeft:2 Age:1
-
-79 Name:RABBIT Position:9::1
-Dead: No
-ProcLeft:2 Age:1
-
-80 Name:RABBIT Position:8::7
-Dead: No
-ProcLeft:2 Age:1
-
-81 Name:RABBIT Position:4::2
-Dead: No
-ProcLeft:2 Age:1
-
-82 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:2 Age:1
-
-83 Name:RABBIT Position:4::6
-Dead: No
-ProcLeft:2 Age:1
-
-85 Name:RABBIT Position:9::4
-Dead: No
-ProcLeft:2 Age:1
-
-86 Name:RABBIT Position:9::8
-Dead: No
-ProcLeft:2 Age:1
-
-88 Name:RABBIT Position:6::7
-Dead: No
-ProcLeft:2 Age:1
-
-89 Name:RABBIT Position:6::6
-Dead: No
-ProcLeft:2 Age:1
-
-90 Name:RABBIT Position:6::1
-Dead: No
-ProcLeft:2 Age:1
-
-91 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:2 Age:1
-
 
 Generation 10
 ------------
@@ -1500,210 +151,6 @@ Generation 10
 |F   * RR  |
 |F R FF *FF|
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::2
-Dead: No
-ProcLeft:1 Age:11
-
-12 Name:RABBIT Position:9::0
-Dead: No
-ProcLeft:1 Age:11
-
-20 Name:RABBIT Position:7::8
-Dead: No
-ProcLeft:1 Age:11
-
-23 Name:RABBIT Position:3::1
-Dead: No
-ProcLeft:1 Age:11
-
-40 Name:FOX Position:6::5
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:4
-
-41 Name:FOX Position:8::9
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:5
-
-42 Name:FOX Position:0::5
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:3
-
-43 Name:FOX Position:5::9
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:5
-
-44 Name:FOX Position:0::0
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:1
-
-45 Name:FOX Position:0::9
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:5
-
-46 Name:FOX Position:1::5
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:2
-
-48 Name:FOX Position:1::2
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:6
-
-49 Name:FOX Position:7::5
-Dead: No
-ProcLeft:8 Age:11
-FoodLeft:2
-
-62 Name:RABBIT Position:5::7
-Dead: No
-ProcLeft:1 Age:8
-
-63 Name:RABBIT Position:2::9
-Dead: No
-ProcLeft:1 Age:8
-
-64 Name:RABBIT Position:8::3
-Dead: No
-ProcLeft:1 Age:5
-
-69 Name:RABBIT Position:1::7
-Dead: No
-ProcLeft:1 Age:5
-
-72 Name:RABBIT Position:5::5
-Dead: No
-ProcLeft:1 Age:5
-
-73 Name:RABBIT Position:5::1
-Dead: No
-ProcLeft:1 Age:5
-
-78 Name:RABBIT Position:7::0
-Dead: No
-ProcLeft:1 Age:2
-
-79 Name:RABBIT Position:9::2
-Dead: No
-ProcLeft:1 Age:2
-
-80 Name:RABBIT Position:9::7
-Dead: No
-ProcLeft:1 Age:2
-
-81 Name:RABBIT Position:4::3
-Dead: No
-ProcLeft:1 Age:2
-
-82 Name:RABBIT Position:2::0
-Dead: No
-ProcLeft:1 Age:2
-
-83 Name:RABBIT Position:3::6
-Dead: No
-ProcLeft:1 Age:2
-
-85 Name:RABBIT Position:9::5
-Dead: No
-ProcLeft:1 Age:2
-
-88 Name:RABBIT Position:6::8
-Dead: No
-ProcLeft:1 Age:2
-
-89 Name:RABBIT Position:7::6
-Dead: No
-ProcLeft:1 Age:2
-
-90 Name:RABBIT Position:7::1
-Dead: No
-ProcLeft:1 Age:2
-
-91 Name:RABBIT Position:3::0
-Dead: No
-ProcLeft:1 Age:2
-
-92 Name:FOX Position:6::4
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-93 Name:FOX Position:9::9
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-94 Name:FOX Position:0::6
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-95 Name:FOX Position:4::9
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-96 Name:FOX Position:0::1
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-97 Name:FOX Position:0::8
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-98 Name:FOX Position:1::4
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-99 Name:FOX Position:1::3
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
-100 Name:FOX Position:7::4
-Dead: No
-ProcLeft:9 Age:1
-FoodLeft:6
-
 
 Generation 11
 ------------
@@ -1718,167 +165,6 @@ Generation 11
 |  R *F  FF|
 | F F   *  |
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
-
-1 Name:ROCK Position:1::0
-Dead: No
-
-2 Name:ROCK Position:7::9
-Dead: No
-
-3 Name:ROCK Position:7::2
-Dead: No
-
-4 Name:ROCK Position:5::0
-Dead: No
-
-5 Name:ROCK Position:5::2
-Dead: No
-
-6 Name:ROCK Position:2::4
-Dead: No
-
-7 Name:ROCK Position:8::6
-Dead: No
-
-8 Name:ROCK Position:4::8
-Dead: No
-
-9 Name:ROCK Position:1::1
-Dead: No
-
-11 Name:RABBIT Position:8::1
-Dead: No
-ProcLeft:0 Age:12
-
-12 Name:RABBIT Position:8::0
-Dead: No
-ProcLeft:0 Age:12
-
-23 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:0 Age:12
-
-40 Name:FOX Position:6::6
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:6
-
-41 Name:FOX Position:8::8
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:6
-
-42 Name:FOX Position:0::4
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:2
-
-43 Name:FOX Position:5::8
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:6
-
-44 Name:FOX Position:0::0
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:0
-
-45 Name:FOX Position:1::9
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:4
-
-46 Name:FOX Position:1::6
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:6
-
-48 Name:FOX Position:0::2
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:5
-
-49 Name:FOX Position:8::5
-Dead: No
-ProcLeft:7 Age:12
-FoodLeft:1
-
-63 Name:RABBIT Position:2::8
-Dead: No
-ProcLeft:0 Age:9
-
-64 Name:RABBIT Position:9::3
-Dead: No
-ProcLeft:0 Age:6
-
-72 Name:RABBIT Position:4::5
-Dead: No
-ProcLeft:0 Age:6
-
-73 Name:RABBIT Position:6::1
-Dead: No
-ProcLeft:0 Age:6
-
-78 Name:RABBIT Position:6::0
-Dead: No
-ProcLeft:0 Age:3
-
-80 Name:RABBIT Position:8::7
-Dead: No
-ProcLeft:0 Age:3
-
-81 Name:RABBIT Position:5::3
-Dead: No
-ProcLeft:0 Age:3
-
-83 Name:RABBIT Position:2::6
-Dead: No
-ProcLeft:0 Age:3
-
-85 Name:RABBIT Position:9::4
-Dead: No
-ProcLeft:0 Age:3
-
-88 Name:RABBIT Position:6::7
-Dead: No
-ProcLeft:0 Age:3
-
-91 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:0 Age:3
-
-92 Name:FOX Position:6::3
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-93 Name:FOX Position:9::8
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-95 Name:FOX Position:3::9
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-97 Name:FOX Position:0::7
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-99 Name:FOX Position:2::3
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
-100 Name:FOX Position:8::4
-Dead: No
-ProcLeft:8 Age:2
-FoodLeft:5
-
 
 Generation 12
 ------------
@@ -1893,171 +179,1235 @@ Generation 12
 | FRF*     |
 |       *  |
 ------------
-0 Name:ROCK Position:2::7
-Dead: No
 
-1 Name:ROCK Position:1::0
-Dead: No
+Generation 13
+------------
+| *R  *RR R|
+| * RRR R  |
+|F  F * *RR|
+|   R   R  |
+|  *  F  F |
+|F  R R    |
+| F   F R*F|
+|  *    F  |
+|  F *     |
+|  R    *  |
+------------
 
-2 Name:ROCK Position:7::9
-Dead: No
+Generation 14
+------------
+| *  R*  R |
+|F*R   R  R|
+|     * *  |
+|   F  R F |
+|F *R      |
+| F  RF R F|
+|        * |
+|  *   F   |
+| F  *     |
+|   R   *  |
+------------
 
-3 Name:ROCK Position:7::2
-Dead: No
+Generation 15
+------------
+| *  R*  RR|
+| *R R RRRR|
+|F R  * *  |
+|F    RR  F|
+| F*F      |
+|   RF  R  |
+|       R*F|
+|  *  F    |
+|F   *     |
+|  RR   *  |
+------------
 
-4 Name:ROCK Position:5::0
-Dead: No
+Generation 16
+------------
+| *RR * R R|
+| * R      |
+| F   *R*RF|
+| FR R     |
+|F * F  R  |
+|  R      F|
+|        * |
+|  * F  R  |
+|  R *     |
+|    R  *  |
+------------
 
-5 Name:ROCK Position:5::2
-Dead: No
+Generation 17
+------------
+| *  R*R R |
+| *R   R RF|
+|     * *  |
+|   RF     |
+|  *   R  F|
+|FR        |
+|    F   * |
+|  *       |
+| R  *  R  |
+|   R   *  |
+------------
 
-6 Name:ROCK Position:2::4
-Dead: No
+Generation 18
+------------
+| * RR*RRR |
+| *R   RRF |
+|  R  * *R |
+|  RF     F|
+|  *  RR   |
+| F        |
+| R F    * |
+|  *       |
+| R  * RR  |
+| RRR   *  |
+------------
 
-7 Name:ROCK Position:8::6
-Dead: No
+Generation 19
+------------
+| *R  *RR R|
+| * RRR F  |
+|   F * * R|
+| R F R    |
+| F*    R  |
+| F        |
+|        * |
+| R*       |
+|  RR*R  R |
+|R      *  |
+------------
 
-8 Name:ROCK Position:4::8
-Dead: No
+Generation 20
+------------
+| *  R*  R |
+| *RF  FF R|
+|     * *  |
+|RF    R   |
+|  *F      |
+|       R  |
+| F      * |
+|  *R      |
+|RR  *  R  |
+|     R *  |
+------------
 
-9 Name:ROCK Position:1::1
-Dead: No
+Generation 21
+------------
+| *  R*F RR|
+| *R F   FR|
+|  R  * *  |
+|F  F  RR  |
+|R *    R  |
+|       R  |
+|F  R    * |
+|R *R      |
+|RR  * RR  |
+| R   RR*  |
+------------
 
-11 Name:RABBIT Position:7::1
-Dead: No
-ProcLeft:2 Age:13
+Generation 22
+------------
+| *RR * F R|
+| *        |
+|F   F*R*FR|
+|  F     R |
+|  *     R |
+|F  R    R |
+|        * |
+| R*    R  |
+|   R*R    |
+|R   R R*  |
+------------
 
-12 Name:RABBIT Position:7::0
-Dead: No
-ProcLeft:2 Age:13
+Generation 23
+------------
+| *   *  F |
+|F*RR  R   |
+|  F  * *  |
+|    F  RFR|
+|F *      R|
+|       R  |
+| R R   R* |
+|  *R      |
+|    *     |
+| R R R *  |
+------------
 
-40 Name:FOX Position:6::7
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:6
+Generation 24
+------------
+|F*RR *    |
+| *FR  R F |
+|     *R* R|
+|F     RR F|
+|  * F    R|
+|      RR R|
+| RRR   R* |
+| R*R   R  |
+| R R*     |
+| RRR RR*  |
+------------
 
-41 Name:FOX Position:8::7
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:6
+Generation 25
+------------
+| *F R*    |
+|F*  R  F  |
+|F    *R*R |
+|    FR  F |
+|  *    RR |
+|  R  R    |
+|R   R R *R|
+|R * R R   |
+|R R *RR   |
+|R   R  *  |
+------------
 
-42 Name:FOX Position:0::3
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:1
+Generation 26
+------------
+|F* F * F  |
+| *   R    |
+|    F* * R|
+|F     RF  |
+|  *  R    |
+| R  R   RR|
+| R R   R* |
+| R*  R R  |
+| R  *     |
+| R   RR*  |
+------------
 
-43 Name:FOX Position:5::7
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:5
+Generation 27
+------------
+| *F  *  F |
+|F*   RR   |
+|   F * * R|
+|     RF  R|
+|F * RR   R|
+|RR RR  RRR|
+|RRRR  RR* |
+|RR*  R R  |
+|RR  *RRR  |
+| RR  RR*  |
+------------
 
-45 Name:FOX Position:1::8
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:3
+Generation 28
+------------
+| *   * F  |
+| *F R  R R|
+|     * *  |
+|    R   R |
+|  *R  F R |
+|F R  RR   |
+|RR  RR R*R|
+|RR*   R   |
+|  R *R  R |
+|R   R R*  |
+------------
 
-46 Name:FOX Position:2::6
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:6
+Generation 29
+------------
+| *   *FF  |
+| *FF R  R |
+|     * *R |
+|   R      |
+|  *  F    |
+|FR R    R |
+|F RR  R * |
+|  *  R RRR|
+|RR  *     |
+| R R R *  |
+------------
 
-48 Name:FOX Position:1::2
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:4
+Generation 30
+------------
+| *F  *    |
+| *  FRFFR |
+|     * *R |
+|  RR    R |
+|  *  F  R |
+| F RRF  R |
+| FRRR RR* |
+| R*  RRRRR|
+|RR  *  RRR|
+|RRRR RR*  |
+------------
 
-49 Name:FOX Position:9::5
-Dead: No
-ProcLeft:6 Age:13
-FoodLeft:6
+Generation 31
+------------
+| * F * F  |
+| *   F   R|
+|   R * * R|
+| R     R  |
+|  *RF    R|
+|  F   FR  |
+|     R  *R|
+|RF*R   RR |
+|  RR*RR   |
+|RR     *RR|
+------------
 
-64 Name:RABBIT Position:8::3
-Dead: No
-ProcLeft:2 Age:7
+Generation 32
+------------
+| *   *F   |
+| * FF   R |
+|     * *  |
+|R  R  R  R|
+|  *F    R |
+| F      RR|
+|R     FR* |
+|  * RRR  R|
+|RF  *   RR|
+|  RR   *  |
+------------
 
-72 Name:RABBIT Position:4::4
-Dead: No
-ProcLeft:2 Age:7
+Generation 33
+------------
+| * F * F  |
+| *   F  RR|
+|     * *  |
+|R RF  RRRR|
+|R *    RRR|
+|       RRR|
+|RF   F R*R|
+|R *RRRRRRR|
+|F  R* R RR|
+| RRR   * R|
+------------
 
-81 Name:RABBIT Position:4::3
-Dead: No
-ProcLeft:2 Age:4
+Generation 34
+------------
+| *  F*  F |
+| *  F     |
+|R R  *R*RR|
+|  F    R  |
+|  *   R RR|
+|R     R RR|
+|   RR F *R|
+| F*     RR|
+|  R *R R R|
+|F   R  *R |
+------------
 
-83 Name:RABBIT Position:3::6
-Dead: No
-ProcLeft:2 Age:4
+Generation 35
+------------
+| * F *    |
+|R*   FR F |
+| RF  * *  |
+|      R RR|
+|R *  R    |
+|     R R R|
+|        *R|
+|  *RR FR R|
+| F  *   R |
+| F R R * R|
+------------
 
-88 Name:RABBIT Position:7::7
-Dead: No
-ProcLeft:2 Age:4
+Generation 36
+------------
+|R*F  *R F |
+|R*    F   |
+| F   *R*  |
+|RR    R RR|
+|R * RR  RR|
+|     RRRRR|
+|    R   *R|
+|  *RR  FRR|
+|F  R*  RR |
+|  FR RR*RR|
+------------
 
-91 Name:RABBIT Position:3::0
-Dead: No
-ProcLeft:2 Age:4
+Generation 37
+------------
+|R* F * F  |
+| *        |
+|F    *F* R|
+|  R    R  |
+| R*R  RR R|
+|        RR|
+|   R RR *R|
+|  *  R  F |
+|  F *RR  R|
+|F   R  *R |
+------------
 
-92 Name:FOX Position:5::3
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
+Generation 38
+------------
+| *   *F   |
+|F* F     R|
+|  R  *F*  |
+| R    F  R|
+|  *  R  R |
+|   R R   R|
+|       R*R|
+|  *RR R  F|
+|FFF *   R |
+|     R *  |
+------------
 
-93 Name:FOX Position:9::7
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
+Generation 39
+------------
+| *   *FF R|
+| *    F  R|
+|F R  * *  |
+| RR  F  RR|
+| R* RR  RR|
+|   R RRRRR|
+|   R   R*F|
+|F *RRRR  F|
+|F  F*   R |
+| F   RR*R |
+------------
 
-95 Name:FOX Position:3::8
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
+Generation 40
+------------
+| *   *F F |
+| *      R |
+|F  R *F*RR|
+|F  RF     |
+|  *R  RR R|
+| RR R   RF|
+|F   R   * |
+|  *F   R  |
+|    *RR  F|
+|F F R  * R|
+------------
 
-97 Name:FOX Position:0::6
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:4
+Generation 41
+------------
+| *   * F F|
+|F* R  FR  |
+|     * *  |
+|  RF   RRR|
+|F *  R  RF|
+|   R R R  |
+| FRF    * |
+|  *   R  F|
+|    *  R  |
+| F F R *R |
+------------
 
-99 Name:FOX Position:2::2
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
+Generation 42
+------------
+|F*   *    |
+| * RR  FRF|
+|  R  * *RR|
+|F F   RRRF|
+|  * RR RR |
+|  RFRRRRR |
+|  F     *F|
+|  *   R   |
+| F  * RRR |
+|  F  RR*R |
+------------
 
-100 Name:FOX Position:9::4
-Dead: No
-ProcLeft:7 Age:3
-FoodLeft:6
+Generation 43
+------------
+| *   *  R |
+|F*    F   |
+|F  RR*R*RF|
+| F  R  RR |
+|  *   R  R|
+| R       F|
+| F FRRRR* |
+|  *    RR |
+|F   *R    |
+| F    R* R|
+------------
 
-101 Name:RABBIT Position:8::1
-Dead: No
-ProcLeft:2 Age:1
+Generation 44
+------------
+|F*   *   R|
+| * RR   R |
+|     *F*  |
+|F  R  R  F|
+|  *    R F|
+|  RF R R  |
+|        * |
+|FF* R R  R|
+|    * R   |
+|F    R *R |
+------------
 
-102 Name:RABBIT Position:8::0
-Dead: No
-ProcLeft:2 Age:1
+Generation 45
+------------
+| * R *  RR|
+|F* RRR  RR|
+|     * * F|
+|   R RF   |
+|F *F   RF |
+| RR  RRR  |
+| F   RR *R|
+|  * RRR  R|
+|F   * R   |
+| F   RR*RR|
+------------
 
-103 Name:RABBIT Position:2::1
-Dead: No
-ProcLeft:2 Age:1
+Generation 46
+------------
+|F*  R* R R|
+| *R   R  F|
+|   R * *R |
+|    R  F  |
+|  *   R  F|
+|FF FR    R|
+|    R  R* |
+|  *    RR |
+|    *R  RR|
+|  F R R*  |
+------------
 
-104 Name:RABBIT Position:2::8
-Dead: No
-ProcLeft:2 Age:1
+Generation 47
+------------
+| *   *R R |
+| * RR  RF |
+|  R  * *  |
+|     RR F |
+|  *     F |
+|F F  R    |
+|F  F  R *R|
+|  *      R|
+|    *  R  |
+|  FF R *RR|
+------------
 
-105 Name:RABBIT Position:9::3
-Dead: No
-ProcLeft:2 Age:1
+Generation 48
+------------
+| * R *RRF |
+| * RRRRRF |
+| RR  * *  |
+|    RRR FF|
+|F *   RF  |
+|  FF RR  R|
+|   F RR *R|
+|F *     RR|
+|  F * RRRR|
+|    FRR*RR|
+------------
 
-106 Name:RABBIT Position:4::5
-Dead: No
-ProcLeft:2 Age:1
+Generation 49
+------------
+| *R  *RF  |
+| *   R F  |
+|R  RR*R*  |
+|       F  |
+| F*FRR F F|
+| F     F  |
+|    F  R*R|
+| F*   RR R|
+|    *R  RR|
+|  FF  R*RR|
+------------
 
-107 Name:RABBIT Position:6::1
-Dead: No
-ProcLeft:2 Age:1
+Generation 50
+------------
+| *   *  F |
+|R*RRR F   |
+|     * *  |
+| F  R F   |
+|  *   F   |
+|   FF    F|
+| F    RF* |
+|  *  R  R |
+|  F * RR R|
+|    FR *RR|
+------------
 
-108 Name:RABBIT Position:6::0
-Dead: No
-ProcLeft:2 Age:1
+Generation 51
+------------
+| * R *    |
+|R*RRRF  F |
+|R R  * *  |
+|    RF    |
+| F*    F  |
+|          |
+|  FFFRF *F|
+|  *  R RR |
+|   F*RRRRR|
+|     FR*RR|
+------------
 
-114 Name:RABBIT Position:4::0
-Dead: No
-ProcLeft:2 Age:1
+Generation 52
+------------
+|R*R R*  F |
+| *  F     |
+|   R * *  |
+|R R F     |
+|F * R     |
+|   F R F  |
+| F      * |
+|  * F F  F|
+|  F *R RR |
+|      F*RR|
+------------
 
+Generation 53
+------------
+| * R *   F|
+|R*        |
+|  R F* *  |
+| R        |
+|  *F R F  |
+|F         |
+|    FR  * |
+|  *     R |
+| F  * F  F|
+|     F *RR|
+------------
+
+Generation 54
+------------
+|R*RR *    |
+|R*       F|
+|  RF * *  |
+| RR    F  |
+|  *  R    |
+|     R    |
+|     FR * |
+|  *    RR |
+|    *F  R |
+|      F*RF|
+------------
+
+Generation 55
+------------
+|R*   *    |
+| *RR      |
+|R    * * F|
+|   F R    |
+| R*    F  |
+|      R   |
+|      F * |
+|  *   R  R|
+|    * F  F|
+|     F *R |
+------------
+
+Generation 56
+------------
+| *R  *    |
+|R*        |
+|   F * *  |
+| R    R   |
+|  *   F   |
+|          |
+|     F  * |
+|  *    RR |
+|    *F FF |
+|     F *  |
+------------
+
+Generation 57
+------------
+| *RR *    |
+|R*        |
+|RR  F* *  |
+| R   RF   |
+|  *       |
+|          |
+|    F  R* |
+|  *    FFR|
+|    * F F |
+|      F*  |
+------------
+
+Generation 58
+------------
+|R*  R*    |
+| *R       |
+|  R F* *  |
+|R   F     |
+| R*   F   |
+|       R  |
+|   FF   * |
+|  *   FF F|
+|    *F   F|
+|     F *  |
+------------
+
+Generation 59
+------------
+| *   *    |
+|R* RF     |
+| R   * *  |
+| R F  F   |
+|  *   F   |
+|          |
+|       F*F|
+|  *FFF    |
+|    * F F |
+|      F*  |
+------------
+
+Generation 60
+------------
+|R* R *    |
+|R* F      |
+| RR  * *  |
+| RF  F    |
+|  *    F  |
+|       F F|
+|    F   * |
+|  *       |
+|   F*F F  |
+|     F *  |
+------------
+
+Generation 61
+------------
+|R*R  *    |
+| *F       |
+|R    * *  |
+| F  F     |
+| R*   F   |
+|        F |
+|        * |
+|  * F  F  |
+|    * F   |
+|      F*  |
+------------
+
+Generation 62
+------------
+| * R *    |
+|R* F      |
+|    F* *  |
+|  F       |
+|  *  F    |
+| R     F  |
+|    F   * |
+|  *   F   |
+|    *     |
+|     F *  |
+------------
+
+Generation 63
+------------
+| *RF *    |
+|R*        |
+|R  F * *  |
+|   F      |
+| R* F     |
+| R  F     |
+|       F* |
+|  *  F    |
+|    *     |
+|       *  |
+------------
+
+Generation 64
+------------
+|R*  F*    |
+| *R       |
+|     * *  |
+|RR  F     |
+|  *F      |
+|  R  F    |
+|        * |
+|  * F     |
+|    *     |
+|       *  |
+------------
+
+Generation 65
+------------
+| *   *    |
+|R* RF     |
+|     * *  |
+|   F      |
+|RR*       |
+| R F      |
+|        * |
+|  *       |
+|    *     |
+|       *  |
+------------
+
+Generation 66
+------------
+|R* R *    |
+|R* F      |
+|     * *  |
+| RF       |
+|RR*       |
+|RR        |
+|        * |
+|  *       |
+|    *     |
+|       *  |
+------------
+
+Generation 67
+------------
+|R*R  *    |
+| *        |
+|RR F * *  |
+|R         |
+| R*       |
+|  R       |
+|R       * |
+|  *       |
+|    *     |
+|       *  |
+------------
+
+Generation 68
+------------
+| *   *    |
+|R*R       |
+|  FF * *  |
+| R        |
+|  *       |
+| R        |
+| R      * |
+|  *       |
+|    *     |
+|       *  |
+------------
+
+Generation 69
+------------
+| *   *    |
+|R*FF      |
+|RR   * *  |
+| R        |
+|  *       |
+|RR        |
+| RR     * |
+|  *       |
+|    *     |
+|       *  |
+------------
+
+Generation 70
+------------
+|R*   *    |
+| *  F     |
+|  F  * *  |
+|R         |
+|RR*       |
+|  R       |
+|   R    * |
+| R*       |
+|    *     |
+|       *  |
+------------
+
+Generation 71
+------------
+| *   *    |
+|R* F      |
+|     * *  |
+| RF       |
+|  *       |
+|RR        |
+| RR     * |
+|  *       |
+|    *     |
+|       *  |
+------------
+
+Generation 72
+------------
+|R*   *    |
+|R*F       |
+| R   * *  |
+| F        |
+|R *       |
+|RRR       |
+| RRR    * |
+| R*       |
+|    *     |
+|       *  |
+------------
+
+Generation 73
+------------
+|R*F  *    |
+| *        |
+|R    * *  |
+|R         |
+| F*       |
+|   R      |
+|R R     * |
+|  *       |
+| R  *     |
+|       *  |
+------------
+
+Generation 74
+------------
+| *   *    |
+|R*F       |
+| R   * *  |
+| F        |
+|  *       |
+|  R R     |
+| R      * |
+|  *       |
+|    *     |
+| R     *  |
+------------
+
+Generation 75
+------------
+| *   *    |
+|R*        |
+|RFF  * *  |
+|          |
+|  *       |
+|  RRR     |
+| RR     * |
+|  *       |
+| R  *     |
+| R     *  |
+------------
+
+Generation 76
+------------
+|R*   *    |
+| *        |
+|     * *  |
+|RF        |
+|  * R     |
+| R        |
+|   R    * |
+| R*       |
+|    *     |
+|R      *  |
+------------
+
+Generation 77
+------------
+| *   *    |
+|R*        |
+| F   * *  |
+| F  R     |
+|R *       |
+|          |
+| R  R   * |
+|  *       |
+|    *     |
+| R     *  |
+------------
+
+Generation 78
+------------
+|R*   *    |
+|R*        |
+|  F R* *  |
+|F   R     |
+|R *       |
+| R        |
+| R RR   * |
+|  *       |
+| R  *     |
+| R     *  |
+------------
+
+Generation 79
+------------
+|R*   *    |
+| *  R     |
+|F    * *  |
+|  F       |
+| R* R     |
+|   R      |
+|     R  * |
+| R*       |
+|    *     |
+|  R    *  |
+------------
+
+Generation 80
+------------
+| *  R*    |
+|F*        |
+|     * *  |
+| F        |
+|  *R      |
+|  R       |
+| R      * |
+|  *  R    |
+|  R *     |
+|       *  |
+------------
+
+Generation 81
+------------
+| *  R*    |
+| *  R     |
+|FF   * *  |
+|   R      |
+|  *R      |
+|  RR      |
+|RR   R  * |
+|  *  R    |
+|  RR*     |
+|       *  |
+------------
+
+Generation 82
+------------
+| * R *    |
+| * R      |
+|  FR * *  |
+|F         |
+|  * R     |
+|          |
+|  RRR   * |
+|R *R  R   |
+| R  *     |
+|       *  |
+------------
+
+Generation 83
+------------
+| *R  *    |
+| *  R     |
+|     * *  |
+| FFR      |
+|  *       |
+|  RRR     |
+|        * |
+|  * RR    |
+|R   *     |
+|       *  |
+------------
+
+Generation 84
+------------
+| *R R*    |
+| *R R     |
+| F   * *  |
+|   F      |
+|  *R      |
+|  RRR     |
+|  RRR   * |
+|  * RR    |
+|RR  *R    |
+|       *  |
+------------
+
+Generation 85
+------------
+| * R *    |
+| * R      |
+|  F  * *  |
+|          |
+|  *FR     |
+| R R R    |
+| R   R  * |
+|RR*R      |
+|    *     |
+|     R *  |
+------------
+
+Generation 86
+------------
+| *  R*    |
+| *F       |
+|     * *  |
+|    R     |
+|  *F      |
+|  RFR     |
+|R R   R * |
+|  *       |
+| R R*R    |
+|       *  |
+------------
+
+Generation 87
+------------
+| *  R*    |
+| *F R     |
+|  F  * *  |
+|    RR    |
+|  * F     |
+| RR R     |
+|R RFR R * |
+|R *  RR   |
+|RR R*R    |
+|   R   *  |
+------------
+
+Generation 88
+------------
+| * R *    |
+| * F      |
+|    R* *  |
+|  F       |
+| R*  F    |
+|   F RR   |
+| R      * |
+| R*RR  R  |
+|    * R   |
+|R R    *  |
+------------
+
+Generation 89
+------------
+| *RF *    |
+| *        |
+|     * *  |
+| F  R     |
+|  *   F   |
+|          |
+|R  F R  * |
+|  *  R    |
+| RR *  R  |
+| R    R*  |
+------------
+
+Generation 90
+------------
+| *F  *    |
+| *R       |
+|    R* *  |
+|  F R     |
+|  *  F    |
+|          |
+|R    RR * |
+|RR*FRR    |
+| RR * RR  |
+|RRR   R*  |
+------------
+
+Generation 91
+------------
+| * F *    |
+| *  R     |
+|  F  * *  |
+|          |
+|  * F     |
+|R     R   |
+| R  R   * |
+|  *   R   |
+|R  F*   R |
+| R R R *  |
+------------
+
+Generation 92
+------------
+| *  F*    |
+| *        |
+| F   * *  |
+|          |
+|R *F      |
+|          |
+|     RR * |
+|RR*F      |
+|    *R R  |
+|R R    *  |
+------------
+
+Generation 93
+------------
+| *   *    |
+| *  F     |
+|F    * *  |
+|R  F      |
+|R *       |
+|          |
+| R F RR * |
+|RR*  RR   |
+|R   *RRR  |
+|RRRR   *  |
+------------
+
+Generation 94
+------------
+| *   *    |
+| *        |
+|    F* *  |
+|FRF       |
+|  *       |
+|R    R    |
+|R F    R* |
+|  * R  R  |
+| RR *     |
+|R   RRR*  |
+------------
+
+Generation 95
+------------
+| *   *    |
+| *        |
+| RF  * *  |
+| F  F     |
+|  *  R    |
+| R        |
+| FF R R * |
+|  *     R |
+|   R*RR   |
+| R R   *  |
+------------
+
+Generation 96
+------------
+| *   *    |
+| *        |
+|RFF  * *  |
+| F   F    |
+|  *  R    |
+|RF        |
+|   FRRR * |
+|  *R R RR |
+| R R*RRR  |
+| RRR   *  |
+------------
+
+Generation 97
+------------
+| *   *    |
+|R*        |
+|F  F * *  |
+|    FF    |
+| F*   R   |
+|    RRR   |
+|RF  F  R* |
+| R* R R   |
+|  R *   R |
+|R   RR *  |
+------------
+
+Generation 98
+------------
+|R*   *    |
+|F*        |
+|     * *  |
+| F F      |
+|  * FF    |
+| F     R  |
+|     FR * |
+|R *  R    |
+|RR  * R  R|
+|   R  R*  |
+------------
+
+Generation 99
+------------
+|F*   *    |
+| *        |
+|   F * *  |
+|          |
+| F*       |
+|    FF R  |
+|      RR* |
+|RR* RFR   |
+|RR  * RR R|
+|RRRR RR* R|
+------------
+
+Generation 100
+------------
+| *   *    |
+|F* F      |
+|     * *  |
+|          |
+|F *    R  |
+|          |
+|RR  FF  * |
+|  *    R R|
+|R R *F    |
+|RR  R R*R |
+------------

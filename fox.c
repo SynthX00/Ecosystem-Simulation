@@ -7,7 +7,6 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, in
             fox->isDead = 1;
             return;
     }
-    
     if(fox->age > 0){
         fox->timeStarveLeft--;
         fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
