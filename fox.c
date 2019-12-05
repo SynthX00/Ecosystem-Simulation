@@ -2,16 +2,11 @@
 
 void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, int currentGen, ObjectPointer worldObjects, int* currentObjectIndex){
 
-    //Die of starvation?
-    if(fox->timeStarveLeft <= 0){
-            fox->isDead = 1;
-            return;
+    if(fox->age == 0){
+        fox->age++;
+        return;
     }
-    if(fox->age > 0){
-        fox->timeStarveLeft--;
-        fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
-    }
-    
+
     //Are any rabbits around me?
     int availableCellCount;
     int availableCells[4];
@@ -24,6 +19,11 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, in
             FoxMove(fox, 1, availableCells[((currentGen + fox->posX + fox->posY)%availableCellCount)], worldObjects, currentObjectIndex);
     }//Else try to move to an empty space
     else{
+
+        if(fox->age > 0){
+            fox->timeStarveLeft--;
+            fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
+        }
 
         FoxCheckCells(fox, 0, world, worldHeight, worldWidth, availableCells, &availableCellCount);
         if (availableCellCount > 0){
@@ -83,10 +83,16 @@ void FoxCheckCells(ObjectPointer fox, int hunt, int** world, int worldHeight, in
 
 void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObjects, int* outCurrentObjectIndex){
 
+    //check starvation
+    if(fox->timeStarveLeft <= 0 && hunt == 0){
+            fox->isDead = 1;
+            return;
+    }
+
     //check if will procreate this move
     if(fox->timeProcLeft <= 0){
         //create new fox
-        worldObjects[(*outCurrentObjectIndex)] = NewObject(*outCurrentObjectIndex, "FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
+        worldObjects[(*outCurrentObjectIndex)] = NewObject("FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
         (*outCurrentObjectIndex)++;
         fox->timeProcLeft = fox->timeToProc;
         //printf("Fox Created at index %d, with the position %d::%d\n",*outCurrentObjectIndex,fox->posX,fox->posY);
@@ -120,14 +126,24 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
     }
 }
 
-void FoxCheckConflicts(ObjectPointer fox, ObjectPointer worldObjects, int size){
+void FoxCheckConflicts(ObjectPointer fox, int myIndex, ObjectPointer worldObjects, int size){
     
     for (int i = 0; i < size; i++){
         
-        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0 && (worldObjects[i].index != fox->index)){
+        if(myIndex == i){
+            continue;
+        }
+
+        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0){
             if (worldObjects[i].timeProcLeft > fox->timeProcLeft){
+                /* PrintObject(fox);
+                printf("killed\n");
+                PrintObject(&worldObjects[i]); */
                 worldObjects[i].isDead = 1;
-            }else if(worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){
+            }else if(worldObjects[i].timeProcLeft == fox->timeProcLeft && worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){
+                /* PrintObject(fox);
+                printf("killed\n");
+                PrintObject(&worldObjects[i]); */
                 worldObjects[i].isDead = 1;
             }
         }

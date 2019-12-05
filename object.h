@@ -7,7 +7,7 @@
 struct Object{
 
     char name[6];
-    int index;
+    //int index;
     int isDead;
     int posX, posY;
     int timeToProc, timeProcLeft, age;
@@ -17,7 +17,7 @@ struct Object{
 typedef struct Object Object, *ObjectPointer;
 
 Object InitObject();
-Object NewObject(int index, char* s, int x, int y, int tProc, int tStarve, int startingAge);
+Object NewObject(char* s, int x, int y, int tProc, int tStarve, int startingAge);
 
 void PrintObject(ObjectPointer obj);
 void PrintObjectList(ObjectPointer worldObjects, int size, int all);

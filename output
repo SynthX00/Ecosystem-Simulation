@@ -218,7 +218,7 @@ Generation 15
 |   RF  R  |
 |       R*F|
 |  *  F    |
-|F   *     |
+|    *     |
 |  RR   *  |
 ------------
 
@@ -226,8 +226,8 @@ Generation 16
 ------------
 | *RR * R R|
 | * R      |
-| F   *R*RF|
-| FR R     |
+|     *R*RF|
+|  R R     |
 |F * F  R  |
 |  R      F|
 |        * |
@@ -240,7 +240,7 @@ Generation 17
 ------------
 | *  R*R R |
 | *R   R RF|
-|     * *  |
+|  R  * *  |
 |   RF     |
 |  *   R  F|
 |FR        |
@@ -252,13 +252,13 @@ Generation 17
 
 Generation 18
 ------------
-| * RR*RRR |
+| *RRR*RRR |
 | *R   RRF |
-|  R  * *R |
-|  RF     F|
+|  RR * *R |
+|  RF      |
 |  *  RR   |
 | F        |
-| R F    * |
+| R      * |
 |  *       |
 | R  * RR  |
 | RRR   *  |
@@ -268,7 +268,7 @@ Generation 19
 ------------
 | *R  *RR R|
 | * RRR F  |
-|   F * * R|
+| R FR* * R|
 | R F R    |
 | F*    R  |
 | F        |
@@ -281,10 +281,10 @@ Generation 19
 Generation 20
 ------------
 | *  R*  R |
-| *RF  FF R|
-|     * *  |
-|RF    R   |
-|  *F      |
+| *R   FF R|
+|  F  * *  |
+|RF  F R   |
+|  *       |
 |       R  |
 | F      * |
 |  *R      |
@@ -295,8 +295,8 @@ Generation 20
 Generation 21
 ------------
 | *  R*F RR|
-| *R F   FR|
-|  R  * *  |
+| *FRR   FR|
+|     * *  |
 |F  F  RR  |
 |R *    R  |
 |       R  |
@@ -308,10 +308,10 @@ Generation 21
 
 Generation 22
 ------------
-| *RR * F R|
-| *        |
-|F   F*R*FR|
-|  F     R |
+| *FR * F R|
+| *   R    |
+|F  F *R*FR|
+|        R |
 |  *     R |
 |F  R    R |
 |        * |
@@ -322,10 +322,10 @@ Generation 22
 
 Generation 23
 ------------
-| *   *  F |
-|F*RR  R   |
-|  F  * *  |
-|    F  RFR|
+| * F *  F |
+|F* F  R   |
+|     * *  |
+|       RFR|
 |F *      R|
 |       R  |
 | R R   R* |
@@ -336,11 +336,11 @@ Generation 23
 
 Generation 24
 ------------
-|F*RR *    |
-| *FR  R F |
+|F*  F*    |
+| *  F R F |
 |     *R* R|
 |F     RR F|
-|  * F    R|
+|  *      R|
 |      RR R|
 | RRR   R* |
 | R*R   R  |
@@ -350,10 +350,10 @@ Generation 24
 
 Generation 25
 ------------
-| *F R*    |
-|F*  R  F  |
+| * F *    |
+|F* F   F  |
 |F    *R*R |
-|    FR  F |
+|     R  F |
 |  *    RR |
 |  R  R    |
 |R   R R *R|
@@ -364,11 +364,11 @@ Generation 25
 
 Generation 26
 ------------
-|F* F * F  |
-| *   R    |
-|    F* * R|
+|F*  F* F  |
+| *F       |
+|     * * R|
 |F     RF  |
-|  *  R    |
+|  *       |
 | R  R   RR|
 | R R   R* |
 | R*  R R  |
@@ -378,11 +378,11 @@ Generation 26
 
 Generation 27
 ------------
-| *F  *  F |
-|F*   RR   |
-|   F * * R|
+| *   *  F |
+| *        |
+|  F  * * R|
 |     RF  R|
-|F * RR   R|
+|F *      R|
 |RR RR  RRR|
 |RRRR  RR* |
 |RR*  R R  |
@@ -393,11 +393,11 @@ Generation 27
 Generation 28
 ------------
 | *   * F  |
-| *F R  R R|
-|     * *  |
+| *       R|
+| F   *F*  |
 |    R   R |
-|  *R  F R |
-|F R  RR   |
+|  * R   R |
+|F R   R   |
 |RR  RR R*R|
 |RR*   R   |
 |  R *R  R |
@@ -407,41 +407,41 @@ Generation 28
 Generation 29
 ------------
 | *   *FF  |
-| *FF R  R |
+| *    F R |
 |     * *R |
 |   R      |
-|  *  F    |
-|FR R    R |
+|  *  R    |
+|FR   R  R |
 |F RR  R * |
-|  *  R RRR|
+|  *    RRR|
 |RR  *     |
 | R R R *  |
 ------------
 
 Generation 30
 ------------
-| *F  *    |
-| *  FRFFR |
+| *   *F   |
+| *    FFR |
 |     * *R |
 |  RR    R |
-|  *  F  R |
-| F RRF  R |
-| FRRR RR* |
-| R*  RRRRR|
+|  * RR  R |
+| F   RR R |
+| FRR  RR* |
+| R*R   RRR|
 |RR  *  RRR|
 |RRRR RR*  |
 ------------
 
 Generation 31
 ------------
-| * F * F  |
+| *   * F  |
 | *   F   R|
 |   R * * R|
 | R     R  |
-|  *RF    R|
-|  F   FR  |
-|     R  *R|
-|RF*R   RR |
+|  *R  R  R|
+|  F    R  |
+|    RR  *R|
+|RF* R R R |
 |  RR*RR   |
 |RR     *RR|
 ------------
@@ -449,965 +449,965 @@ Generation 31
 Generation 32
 ------------
 | *   *F   |
-| * FF   R |
+| * RF   R |
 |     * *  |
-|R  R  R  R|
-|  *F    R |
-| F      RR|
-|R     FR* |
-|  * RRR  R|
+|R     R  R|
+|  *    RR |
+|   F RR  R|
+|R  R    * |
+|  *R R    |
 |RF  *   RR|
-|  RR   *  |
+|  R   R*  |
 ------------
 
 Generation 33
 ------------
-| * F * F  |
-| *   F  RR|
+| * R * F  |
+| * F    RR|
 |     * *  |
-|R RF  RRRR|
-|R *    RRR|
-|       RRR|
-|RF   F R*R|
-|R *RRRRRRR|
-|F  R* R RR|
-| RRR   * R|
+|R     RRRR|
+|R *  R RR |
+|     RRRRR|
+|R RF R  *R|
+|R *RRR  R |
+|F   *   RR|
+|  RR RR* R|
 ------------
 
 Generation 34
 ------------
-| *  F*  F |
+| *  R*  F |
 | *  F     |
-|R R  *R*RR|
-|  F    R  |
-|  *   R RR|
-|R     R RR|
-|   RR F *R|
-| F*     RR|
-|  R *R R R|
+|R    *R*RR|
+|     R R  |
+|  *   R  R|
+|R   R   R |
+| R  F RR* |
+| R*      R|
+|  RR*RRR  |
 |F   R  *R |
 ------------
 
 Generation 35
 ------------
-| * F *    |
-|R*   FR F |
-| RF  * *  |
-|      R RR|
-|R *  R    |
-|     R R R|
-|        *R|
-|  *RR FR R|
-| F  *   R |
-| F R R * R|
+| * R *    |
+|R* F  R F |
+|     * *  |
+|      R  R|
+|R *     R |
+|    FR R  |
+|R       * |
+|  *   RRR |
+| R  *   R |
+| FRR R * R|
 ------------
 
 Generation 36
 ------------
-|R*F  *R F |
-|R*    F   |
-| F   *R*  |
-|RR    R RR|
-|R * RR  RR|
-|     RRRRR|
-|    R   *R|
-|  *RR  FRR|
-|F  R*  RR |
-|  FR RR*RR|
+|R* FR*  F |
+|R*    R   |
+|     *R*  |
+|R     R RR|
+|R *  R RR |
+|     FRR  |
+|R     R * |
+|R *   RRRR|
+|RRR *  RRR|
+|  FRRRR*RR|
 ------------
 
 Generation 37
 ------------
-|R* F * F  |
-| *        |
-|F    *F* R|
-|  R    R  |
-| R*R  RR R|
-|        RR|
-|   R RR *R|
-|  *  R  F |
-|  F *RR  R|
-|F   R  *R |
+|R*  F* F  |
+| *  R  R  |
+|R    *R* R|
+| R   R R  |
+| R*   R  R|
+|R       R |
+|     F R*R|
+| R*  R  R |
+|   R*RR RR|
+|RF  R  *RR|
 ------------
 
 Generation 38
 ------------
-| *   *F   |
-|F* F     R|
-|  R  *F*  |
-| R    F  R|
-|  *  R  R |
-|   R R   R|
-|       R*R|
-|  *RR R  F|
-|FFF *   R |
-|     R *  |
+| * F *F   |
+|R*   RR  R|
+|     * *  |
+|R     R   |
+|R *  R  R |
+| R     R R|
+| R    F * |
+|  *RR R  R|
+|R   *  R  |
+|FF   R *RR|
 ------------
 
 Generation 39
 ------------
-| *   *FF R|
-| *    F  R|
-|F R  * *  |
-| RR  F  RR|
-| R* RR  RR|
-|   R RRRRR|
-|   R   R*F|
-|F *RRRR  F|
-|F  F*   R |
-| F   RR*R |
+| *F  *F  R|
+|R*  RRF  R|
+|R    *R*  |
+|RR   RR   |
+|RR* RR  R |
+|RR     RRR|
+| RRR  FF*R|
+|R *RRRRR R|
+|FF  * RRRR|
+|     RR*RR|
 ------------
 
 Generation 40
 ------------
-| *   *F F |
-| *      R |
-|F  R *F*RR|
-|F  RF     |
-|  *R  RR R|
-| RR R   RF|
-|F   R   * |
-|  *F   R  |
-|    *RR  F|
-|F F R  * R|
+|R*F  * FR |
+| *FR R  R |
+| R   *F*  |
+|R R R  RR |
+|RR*R  R  R|
+|  RR  RFR |
+|R   R   *R|
+| F*   F R |
+|   R*R R R|
+|F   R R*RR|
 ------------
 
 Generation 41
 ------------
-| *   * F F|
-|F* R  FR  |
-|     * *  |
-|  RF   RRR|
-|F *  R  RF|
-|   R R R  |
-| FRF    * |
-|  *   R  F|
-|    *  R  |
-| F F R *R |
+| * F *F  R|
+|R*    F   |
+|  FR * *R |
+| R R      |
+|  * RR FR |
+|RR  RR   R|
+| F      * |
+|  *RR  F R|
+|    *   R |
+| F R R * R|
 ------------
 
 Generation 42
 ------------
-|F*   *    |
-| * RR  FRF|
-|  R  * *RR|
-|F F   RRRF|
-|  * RR RR |
-|  RFRRRRR |
-|  F     *F|
-|  *   R   |
-| F  * RRR |
-|  F  RR*R |
+|R*   * F R|
+|R* F   FRR|
+|   R * *R |
+| RFR R    |
+|R *RRR  F |
+|RFR RR  RR|
+|    RR  *R|
+|  *RR F  R|
+|   R*   RR|
+|  FR RR*RR|
 ------------
 
 Generation 43
 ------------
-| *   *  R |
-|F*    F   |
-|F  RR*R*RF|
-| F  R  RR |
-|  *   R  R|
-| R       F|
-| F FRRRR* |
-|  *    RR |
-|F   *R    |
-| F    R* R|
+|R*   *  F |
+| *      F |
+|R FF * * R|
+|R   R R   |
+| F*   R  F|
+|   R  RR  |
+|R RR    *R|
+|  *  F  R |
+|  F *RR  R|
+|    R  *RR|
 ------------
 
 Generation 44
 ------------
-|F*   *   R|
-| * RR   R |
-|     *F*  |
-|F  R  R  F|
-|  *    R F|
-|  RF R R  |
-|        * |
-|FF* R R  R|
-|    * R   |
-|F    R *R |
+| *   * F  |
+|R* F     F|
+| F   * *  |
+| F     R  |
+|  *RRR    |
+|        RF|
+| R  R R * |
+|  *   F  R|
+| F  *   R |
+|     R * R|
 ------------
 
 Generation 45
 ------------
-| * R *  RR|
-|F* RRR  RR|
-|     * * F|
-|   R RF   |
-|F *F   RF |
-| RR  RRR  |
-| F   RR *R|
-|  * RRR  R|
-|F   * R   |
-| F   RR*RR|
+| * F *  FF|
+|R*        |
+|F    * *  |
+|  F R  RR |
+|  *RRR    |
+|   R R RR |
+|RR  RRF *F|
+|  * R   RR|
+|  F *   RR|
+|     RR* R|
 ------------
 
 Generation 46
 ------------
-|F*  R* R R|
-| *R   R  F|
-|   R * *R |
-|    R  F  |
-|  *   R  F|
-|FF FR    R|
-|    R  R* |
+|R*  F* F  |
+| *       F|
+|     * *  |
+|F  F RR   |
 |  *    RR |
-|    *R  RR|
-|  F R R*  |
+|  R R     |
+|  RR   F* |
+|R *  R R F|
+|    * RR R|
+|  F R  *R |
 ------------
 
 Generation 47
 ------------
-| *   *R R |
-| * RR  RF |
-|  R  * *  |
-|     RR F |
-|  *     F |
-|F F  R    |
-|F  F  R *R|
-|  *      R|
-|    *  R  |
-|  FF R *RR|
+| *   *F   |
+|R*  F   F |
+|   F * *  |
+| F     R  |
+|  *  R   R|
+| R R      |
+| R  R F * |
+|  *   R F |
+|R   *R  R |
+|  FF   * R|
 ------------
 
 Generation 48
 ------------
-| * R *RRF |
-| * RRRRRF |
-| RR  * *  |
-|    RRR FF|
-|F *   RF  |
-|  FF RR  R|
-|   F RR *R|
-|F *     RR|
-|  F * RRRR|
-|    FRR*RR|
+|R*   *  F |
+|R* F  F F |
+|   F * *  |
+|F    R RRR|
+|  *  R   R|
+|RRRR      |
+| RR RF  * |
+|  *  RRRF |
+|RRF *R  FR|
+|    F  *RR|
 ------------
 
 Generation 49
 ------------
-| *R  *RF  |
-| *   R F  |
-|R  RR*R*  |
-|       F  |
-| F*FRR F F|
-| F     F  |
-|    F  R*R|
-| F*   RR R|
-|    *R  RR|
-|  FF  R*RR|
+|R*   *   F|
+| *  F    F|
+|F F  * * R|
+|F     R   |
+| R*   RRR |
+|  R       |
+|R  RFF R* |
+|R * R    F|
+|    * R   |
+| RF  F *FR|
 ------------
 
 Generation 50
 ------------
-| *   *  F |
-|R*RRR F   |
-|     * *  |
-| F  R F   |
-|  *   F   |
-|   FF    F|
-| F    RF* |
-|  *  R  R |
-|  F * RR R|
-|    FR *RR|
+| *   *    |
+|F*      F |
+|   FF* *  |
+| F     R R|
+|  *  R   R|
+| R        |
+| R F  F * |
+| R*R R    |
+|  F *F  FF|
+|R      *  |
 ------------
 
 Generation 51
 ------------
-| * R *    |
-|R*RRRF  F |
-|R R  * *  |
-|    RF    |
-| F*    F  |
-|          |
-|  FFFRF *F|
-|  *  R RR |
-|   F*RRRRR|
-|     FR*RR|
+| *   *    |
+| *  F  F  |
+|F    * * R|
+|   F   RRR|
+| F* RR  RR|
+|RR        |
+|RR      * |
+| R*FRFF F |
+| F  *     |
+|RR     * F|
 ------------
 
 Generation 52
 ------------
-|R*R R*  F |
-| *  F     |
-|   R * *  |
-|R R F     |
-|F * R     |
-|   F R F  |
-| F      * |
-|  * F F  F|
-|  F *R RR |
-|      F*RR|
+| *   *    |
+| *    F  R|
+|     * *R |
+|F    RR  R|
+|F *F   R  |
+|  R      R|
+|  R RF  * |
+|R * F  F F|
+|F   *     |
+|  R    *F |
 ------------
 
 Generation 53
 ------------
-| * R *   F|
-|R*        |
-|  R F* *  |
-| R        |
-|  *F R F  |
-|F         |
-|    FR  * |
-|  *     R |
-| F  * F  F|
-|     F *RR|
+| *   *    |
+| *   F  R |
+|     * *  |
+| F     RR |
+| F*  RR  R|
+| R FR     |
+|   RF   * |
+|FR*     F |
+|  R *  F  |
+|       * F|
 ------------
 
 Generation 54
 ------------
-|R*RR *    |
-|R*       F|
-|  RF * *  |
-| RR    F  |
-|  *  R    |
-|     R    |
-|     FR * |
-|  *    RR |
-|    *F  R |
-|      F*RF|
+| *   *    |
+| *      R |
+| F   * *R |
+|      RRRR|
+|  * RRR  R|
+|RF  R     |
+|   F    * |
+| F*R   F  |
+| RRR* F   |
+|       *F |
 ------------
 
 Generation 55
 ------------
-|R*   *    |
-| *RR      |
-|R    * * F|
-|   F R    |
-| R*    F  |
-|      R   |
-|      F * |
-|  *   R  R|
-|    * F  F|
-|     F *R |
+| *   *  R |
+| *        |
+|  F  * * R|
+|    RR    |
+| F*    RR |
+|     R    |
+|R F     * |
+|F * R F   |
+|R   *     |
+|  RR   * F|
 ------------
 
 Generation 56
 ------------
-| *R  *    |
-|R*        |
-|   F * *  |
-| R    R   |
-|  *   F   |
-|          |
-|     F  * |
-|  *    RR |
-|    *F FF |
-|     F *  |
+| *   *   R|
+| *       R|
+|     * *  |
+| F R   R  |
+|  *  R   R|
+|      R   |
+| FF R   * |
+|  *       |
+|F R *     |
+|R   R  *  |
 ------------
 
 Generation 57
 ------------
-| *RR *    |
-|R*        |
-|RR  F* *  |
-| R   RF   |
-|  *       |
-|          |
-|    F  R* |
-|  *    FFR|
-|    * F F |
-|      F*  |
+| *   *  RR|
+| *       R|
+| F   * * R|
+|   R   RRR|
+|  *R RR  R|
+| FF  RR   |
+|    R   * |
+|  * R     |
+|F RR*     |
+|FR RR  *  |
 ------------
 
 Generation 58
 ------------
-|R*  R*    |
-| *R       |
-|  R F* *  |
-|R   F     |
-| R*   F   |
-|       R  |
-|   FF   * |
-|  *   FF F|
-|    *F   F|
-|     F *  |
+| *   * R R|
+| *      R |
+|  FR * *R |
+|     RR  R|
+| F* R  R  |
+|   FR  R R|
+|     R  * |
+|  *R R    |
+| F  *     |
+| FR  R *  |
 ------------
 
 Generation 59
 ------------
-| *   *    |
-|R* RF     |
-| R   * *  |
-| R F  F   |
-|  *   F   |
-|          |
-|       F*F|
-|  *FFF    |
-|    * F F |
-|      F*  |
+| *   *R R |
+| * R     R|
+|  F  * * R|
+| FF R  R  |
+|  *  R   R|
+|     R    |
+|   FR  R* |
+|  *       |
+|  FR*R    |
+|  FR   *  |
 ------------
 
 Generation 60
 ------------
-|R* R *    |
-|R* F      |
-| RR  * *  |
-| RF  F    |
-|  *    F  |
-|       F F|
-|    F   * |
-|  *       |
-|   F*F F  |
-|     F *  |
+| *   *R R |
+| *FR  R RR|
+| F   * * R|
+|    R  RRR|
+|  * RR   R|
+|    RRRR  |
+|    F  R* |
+|  *R R    |
+|   F*R    |
+|   FR  *  |
 ------------
 
 Generation 61
 ------------
-|R*R  *    |
-| *F       |
-|R    * *  |
-| F  F     |
-| R*   F   |
-|        F |
-|        * |
-|  * F  F  |
-|    * F   |
-|      F*  |
+| *F  * R R|
+| *  R  R  |
+|  F  *R*R |
+|     R   R|
+|  *R  RRR |
+|   R      |
+|   R FR * |
+|  *       |
+|  F *     |
+|    FR *  |
 ------------
 
 Generation 62
 ------------
-| * R *    |
-|R* F      |
-|    F* *  |
-|  F       |
-|  *  F    |
-| R     F  |
-|    F   * |
-|  *   F   |
-|    *     |
-|     F *  |
+| *   *  R |
+| *F   R  R|
+|    R* *  |
+|   R  RRR |
+|  *  R   R|
+|  R  F    |
+|       R* |
+|  *R      |
+| F  *     |
+|     FR*  |
 ------------
 
 Generation 63
 ------------
-| *RF *    |
-|R*        |
-|R  F * *  |
-|   F      |
-| R* F     |
-| R  F     |
-|       F* |
-|  *  F    |
-|    *     |
-|       *  |
+| *   *  RR|
+| *    RRRR|
+|  FRR* *  |
+|   R RRRRR|
+|  * RF R R|
+|  RR   R  |
+|   R   R* |
+|  *R      |
+|F   * R   |
+|      F*  |
 ------------
 
 Generation 64
 ------------
-|R*  F*    |
-| *R       |
-|     * *  |
-|RR  F     |
-|  *F      |
-|  R  F    |
-|        * |
-|  * F     |
-|    *     |
-|       *  |
+| *   * R R|
+| * R      |
+| F   *R*RR|
+|    RF R  |
+|  *R    R |
+|    R R  R|
+|  R R   * |
+|  *    R  |
+|   R*RF   |
+|F      *  |
 ------------
 
 Generation 65
 ------------
-| *   *    |
-|R* RF     |
+| * R *R R |
+| *    R R |
 |     * *  |
-|   F      |
-|RR*       |
-| R F      |
-|        * |
-|  *       |
-|    *     |
-|       *  |
+| F R  F RR|
+|  *      R|
+|  RR R    |
+|   R    * |
+|  *R      |
+|    *  F  |
+| F   R *  |
 ------------
 
 Generation 66
 ------------
-|R* R *    |
-|R* F      |
-|     * *  |
-| RF       |
-|RR*       |
-|RR        |
-|        * |
-|  *       |
-|    *     |
-|       *  |
+| *RR *RRR |
+| *    RRR |
+|     * * R|
+|  FR  F RR|
+|  *   F RR|
+|  RRRR   R|
+|  RRR   * |
+|  *R      |
+|   R* FF  |
+|     RR*  |
 ------------
 
 Generation 67
 ------------
-|R*R  *    |
-| *        |
-|RR F * *  |
-|R         |
-| R*       |
-|  R       |
-|R       * |
-|  *       |
-|    *     |
-|       *  |
+| *   *RR R|
+| *RR R R  |
+|   R * *R |
+| F     F R|
+|  *RR    R|
+| R    F R |
+| R R R  *R|
+|  * R     |
+|  R *R  F |
+|      F*  |
 ------------
 
 Generation 68
 ------------
-| *   *    |
-|R*R       |
-|  FF * *  |
-| R        |
+| *R  *  R |
+| *  R R  R|
+|    R* *  |
+|F  RR   F |
 |  *       |
-| R        |
-| R      * |
-|  *       |
-|    *     |
-|       *  |
+|  RR   F R|
+|R   R   * |
+|  *  R    |
+| R  *  F  |
+|     F *  |
 ------------
 
 Generation 69
 ------------
-| *   *    |
-|R*FF      |
-|RR   * *  |
-| R        |
-|  *       |
-|RR        |
-| RR     * |
-|  *       |
-|    *     |
-|       *  |
+| *RR *  RR|
+| *  RRR RR|
+|   RR* *  |
+|F RRR  F  |
+|F * R  F  |
+| RRRR    R|
+|R   RR  *R|
+|R * RR    |
+| RR * F   |
+|      F*  |
 ------------
 
 Generation 70
 ------------
-|R*   *    |
-| *  F     |
-|  F  * *  |
-|R         |
-|RR*       |
-|  R       |
-|   R    * |
-| R*       |
-|    *     |
-|       *  |
+| *  R* R R|
+| *RR R R  |
+|F R R* *RR|
+|     RF   |
+| F*R  F   |
+|     R  R |
+| RRR    * |
+| R*R     R|
+|    *F    |
+|  R  F *  |
 ------------
 
 Generation 71
 ------------
-| *   *    |
-|R* F      |
-|     * *  |
-| RF       |
-|  *       |
-|RR        |
-| RR     * |
-|  *       |
-|    *     |
-|       *  |
+| *R  *R R |
+| *  R R R |
+| F R * *  |
+| F  R  F R|
+|  *  F    |
+|  RR   R  |
+|R   R   * |
+|  * R   R |
+| RR * F   |
+|      F*  |
 ------------
 
 Generation 72
 ------------
-|R*   *    |
-|R*F       |
-| R   * *  |
-| F        |
-|R *       |
-|RRR       |
-| RRR    * |
-| R*       |
-|    *     |
-|       *  |
+| *R R*RRR |
+| *RRR RRR |
+|  FR * *  |
+|  F R   FR|
+|  * F     |
+|  RRR RR  |
+|R R R   * |
+|R * RR RR |
+|RRR *  F  |
+|  R  F *  |
 ------------
 
 Generation 73
 ------------
-|R*F  *    |
-| *        |
-|R    * *  |
-|R         |
-| F*       |
-|   R      |
-|R R     * |
-|  *       |
-| R  *     |
-|       *  |
+| * R *RR R|
+| *F  R R  |
+|    R* *FR|
+|   F R    |
+|  *F   R  |
+|RR   R    |
+|   R R R* |
+| R*R      |
+|   R*   F |
+|RR  F  *  |
 ------------
 
 Generation 74
 ------------
-| *   *    |
-|R*F       |
-| R   * *  |
-| F        |
-|  *       |
+| *   *  R |
+| * FR R  R|
+|     * *  |
+|    F RRF |
+|R * F     |
 |  R R     |
-| R      * |
-|  *       |
-|    *     |
-| R     *  |
+| R  R R * |
+|  * R     |
+|R   *    F|
+|  RF   *  |
 ------------
 
 Generation 75
 ------------
-| *   *    |
-|R*        |
-|RFF  * *  |
-|          |
-|  *       |
-|  RRR     |
-| RR     * |
-|  *       |
-| R  *     |
-| R     *  |
+| *   *  RR|
+| *  FRRRRR|
+|     * *  |
+|R    FRF  |
+|R * F  R  |
+|  RRF     |
+| RR RRR * |
+|  *RR R   |
+|RR  *     |
+| RFF   * F|
 ------------
 
 Generation 76
 ------------
-|R*   *    |
-| *        |
-|     * *  |
-|RF        |
-|  * R     |
-| R        |
-|   R    * |
-| R*       |
-|    *     |
-|R      *  |
+| *   *RR R|
+| *   F    |
+|R    *R*RR|
+|    F  F  |
+|  *F  RF  |
+|RR   F    |
+|   R   R* |
+| R*  R    |
+|  FF* R   |
+|R      *FF|
 ------------
 
 Generation 77
 ------------
-| *   *    |
-|R*        |
-| F   * *  |
-| F  R     |
-|R *       |
-|          |
-| R  R   * |
+| *   *  R |
+|R*    FRR |
+|     * *  |
+|   F    FR|
+|  *  F  F |
+|  RF      |
+|RR  RRR * |
 |  *       |
-|    *     |
-| R     *  |
+|    *   FF|
+| RFF  R*  |
 ------------
 
 Generation 78
 ------------
-|R*   *    |
-|R*        |
-|  F R* *  |
-|F   R     |
-|R *       |
-| R        |
-| R RR   * |
-|  *       |
-| R  *     |
-| R     *  |
+|R*   * RR |
+|R*     FRR|
+|     * *  |
+|  FF     F|
+|  *      F|
+| RF RF    |
+|RRR RRR * |
+|R *   R FF|
+|    * R   |
+|RF  F R*  |
 ------------
 
 Generation 79
 ------------
-|R*   *    |
-| *  R     |
-|F    * *  |
-|  F       |
-| R* R     |
-|   R      |
-|     R  * |
-| R*       |
-|    *     |
-|  R    *  |
+|R*   *R  R|
+| *    FF  |
+|R  F * *RF|
+| F        |
+| R*     F |
+|R  F  F   |
+|   R    *F|
+| R* RR    |
+|R   *  R  |
+|  F  F *  |
 ------------
 
 Generation 80
 ------------
-| *  R*    |
-|F*        |
+| *   * F  |
+|R* F F   F|
 |     * *  |
-| F        |
-|  *R      |
-|  R       |
-| R      * |
-|  *  R    |
-|  R *     |
+|F       F |
+|R *       |
+| RF      F|
+| R  R F * |
+|R *R  R   |
+|  F *F  R |
 |       *  |
 ------------
 
 Generation 81
 ------------
-| *  R*    |
-| *  R     |
-|FF   * *  |
-|   R      |
-|  *R      |
-|  RR      |
-|RR   R  * |
-|  *  R    |
-|  RR*     |
+| * F *  FF|
+|R*    F   |
+|R    * *  |
+|       F  |
+|FR*       |
+| F        |
+|RRRRR   *F|
+|R *RRFFRR |
+|   F*   R |
 |       *  |
 ------------
 
 Generation 82
 ------------
-| * R *    |
-| * R      |
-|  FR * *  |
-|F         |
-|  * R     |
-|          |
-|  RRR   * |
-|R *R  R   |
-| R  *     |
-|       *  |
+|R*  F*FF  |
+| *       F|
+|     * *  |
+|RR        |
+|  *    F  |
+|F RR      |
+|     R  * |
+| R*FF  F F|
+|    *  R  |
+|       *R |
 ------------
 
 Generation 83
 ------------
-| *R  *    |
-| *  R     |
+| *   *    |
+|R*  F FFF |
 |     * *  |
-| FFR      |
-|  *       |
-|  RRR     |
-|        * |
-|  * RR    |
-|R   *     |
-|       *  |
+|          |
+|RR*R    F |
+| F        |
+| R F  RF* |
+|  *  F  F |
+|    * R   |
+|       * R|
 ------------
 
 Generation 84
 ------------
-| *R R*    |
-| *R R     |
-| F   * *  |
-|   F      |
-|  *R      |
-|  RRR     |
-|  RRR   * |
-|  * RR    |
-|RR  *R    |
-|       *  |
+|R*   * F  |
+|R*        |
+|     * *F |
+| R R      |
+|RR*R   F  |
+|F         |
+| RFF FFF* |
+|  *    F  |
+|    * RR  |
+|       *RR|
 ------------
 
 Generation 85
 ------------
-| * R *    |
-| * R      |
-|  F  * *  |
-|          |
-|  *FR     |
-| R R R    |
-| R   R  * |
-|RR*R      |
-|    *     |
-|     R *  |
+|R*   *    |
+| *     F  |
+|R  R * * F|
+|R R       |
+|  *   FF  |
+|FFFF  FF  |
+|    FF  * |
+| R*   F   |
+|    *R  RR|
+|       *  |
 ------------
 
 Generation 86
 ------------
-| *  R*    |
-| *F       |
-|     * *  |
-|    R     |
-|  *F      |
-|  RFR     |
-|R R   R * |
-|  *       |
-| R R*R    |
-|       *  |
+| *   *    |
+|R*        |
+| RR  * *  |
+| R R   F  |
+|F *F      |
+|     F    |
+| FFF  FF* |
+|  *   F  R|
+|    * FR  |
+|     R *  |
 ------------
 
 Generation 87
 ------------
-| *  R*    |
-| *F R     |
-|  F  * *  |
-|    RR    |
-|  * F     |
-| RR R     |
-|R RFR R * |
-|R *  RR   |
-|RR R*R    |
-|   R   *  |
+| *   *    |
+|R*R       |
+|RRR  * *  |
+|FRRF    F |
+|  *  F    |
+| FF   F   |
+|        *R|
+|  *F F F R|
+|    *  FR |
+|     RR*  |
 ------------
 
 Generation 88
 ------------
-| * R *    |
-| * F      |
-|    R* *  |
-|  F       |
-| R*  F    |
-|   F RR   |
-| R      * |
-| R*RR  R  |
-|    * R   |
-|R R    *  |
+|R*R  *    |
+| *        |
+|FR R * *  |
+|  F  F    |
+| F*     F |
+|   F     R|
+|      F * |
+|  * F   F |
+|    * F  R|
+|    R  *  |
 ------------
 
 Generation 89
 ------------
-| *RF *    |
-| *        |
-|     * *  |
-| F  R     |
-|  *   F   |
-|          |
-|R  F R  * |
-|  *  R    |
-| RR *  R  |
-| R    R*  |
+| * R *    |
+|F*        |
+|    R* *  |
+| F    F   |
+|  *F     F|
+|      F   |
+|    F   * |
+|  *      F|
+|    *     |
+|   R  F*  |
 ------------
 
 Generation 90
 ------------
-| *F  *    |
-| *R       |
-|    R* *  |
-|  F R     |
-|  *  F    |
+|F*RR *    |
+| *        |
+|   RR* *  |
+|  F      F|
+|  *   F   |
 |          |
-|R    RR * |
-|RR*FRR    |
-| RR * RR  |
-|RRR   R*  |
+|        *F|
+|  *       |
+|    * F   |
+|  RR   *  |
 ------------
 
 Generation 91
 ------------
-| * F *    |
-| *  R     |
-|  F  * *  |
+| *   *    |
+|F*RRR     |
+|  F  * * F|
 |          |
-|  * F     |
-|R     R   |
-| R  R   * |
-|  *   R   |
-|R  F*   R |
-| R R R *  |
+|  *       |
+|          |
+|        * |
+|  *   F  F|
+|   R*     |
+| R     *  |
 ------------
 
 Generation 92
 ------------
-| *  F*    |
-| *        |
-| F   * *  |
+|F*R R*    |
+| *       F|
+|   F * *  |
 |          |
-|R *F      |
+|  *       |
 |          |
-|     RR * |
-|RR*F      |
-|    *R R  |
-|R R    *  |
+|      F * |
+|  *R    F |
+|    *     |
+|R      *  |
 ------------
 
 Generation 93
 ------------
-| *   *    |
-| *  F     |
-|F    * *  |
-|R  F      |
-|R *       |
+| *RRR*   F|
+|F*  R     |
+|    F* *  |
 |          |
-| R F RR * |
-|RR*  RR   |
-|R   *RRR  |
-|RRRR   *  |
+|  *       |
+|      F   |
+|   R    * |
+|  *R   F  |
+|    *     |
+|RR     *  |
 ------------
 
 Generation 94
 ------------
-| *   *    |
-| *        |
+|F*  R*    |
+| *RRFR   F|
 |    F* *  |
-|FRF       |
+|          |
 |  *       |
-|R    R    |
-|R F    R* |
-|  * R  R  |
-| RR *     |
-|R   RRR*  |
+|   R      |
+|        * |
+|  *   FF  |
+|R  R*     |
+|  R    *  |
 ------------
 
 Generation 95
 ------------
-| *   *    |
-| *        |
-| RF  * *  |
-| F  F     |
-|  *  R    |
-| R        |
-| FF R R * |
-|  *     R |
-|   R*RR   |
-| R R   *  |
+| * RF*    |
+| *    R   |
+|  R  * *  |
+|    F     |
+|  *       |
+|          |
+|   R   F* |
+|R *R      |
+|  R *     |
+|       *  |
 ------------
 
 Generation 96
 ------------
-| *   *    |
-| *        |
-|RFF  * *  |
-| F   F    |
-|  *  R    |
-|RF        |
-|   FRRR * |
-|  *R R RR |
-| R R*RRR  |
-| RRR   *  |
+| * F *    |
+| * R  R   |
+| RR  *R*  |
+|          |
+|  * F     |
+|       F  |
+|R RR    * |
+|R *R      |
+|  RR*     |
+|       *  |
 ------------
 
 Generation 97
 ------------
-| *   *    |
-|R*        |
-|F  F * *  |
-|    FF    |
-| F*   R   |
-|    RRR   |
-|RF  F  R* |
-| R* R R   |
-|  R *   R |
-|R   RR *  |
+| *  F*    |
+| *     R  |
+|R  R * *  |
+|    F R   |
+|  *    F  |
+|R R       |
+|    R   * |
+|  * R     |
+|R   *     |
+|  RR   *  |
 ------------
 
 Generation 98
 ------------
-|R*   *    |
-|F*        |
+| * F * R  |
+|R*        |
 |     * *  |
-| F F      |
-|  * FF    |
-| F     R  |
-|     FR * |
+|   F      |
+|R *   F   |
+| R        |
+|   R    * |
 |R *  R    |
-|RR  * R  R|
-|   R  R*  |
+|  R *     |
+|    R  *  |
 ------------
 
 Generation 99
 ------------
-|F*   *    |
-| *        |
-|   F * *  |
-|          |
-| F*       |
-|    FF R  |
-|      RR* |
-|RR* RFR   |
-|RR  * RR R|
-|RRRR RR* R|
+| *F  * RR |
+|R*        |
+|R  F * *  |
+|R     F   |
+|RR*       |
+| R        |
+|R RR    * |
+|R *  R    |
+|  RR*R    |
+|   RR  *  |
 ------------
 
 Generation 100
 ------------
-| *   *    |
-|F* F      |
-|     * *  |
-|          |
-|F *    R  |
-|          |
-|RR  FF  * |
-|  *    R R|
-|R R *F    |
-|RR  R R*R |
+|R*   *    |
+| *FF   RR |
+| R   *F*  |
+| R        |
+|  *       |
+|R RR      |
+| R   R  * |
+| R*R      |
+| R  * R   |
+|  R  R *  |
 ------------

@@ -142,9 +142,9 @@ int main(){
         
         ObjectPointer _obj = NULL;
         if(strcmp(_name, "FOX") == 0)
-            worldObjects[i] = NewObject(i, _name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES,1);
+            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_FOXES,GEN_FOOD_FOXES,1);
         else
-            worldObjects[i] = NewObject(i, _name, _posX, _posY, GEN_PROC_RABBITS,0,1);
+            worldObjects[i] = NewObject(_name, _posX, _posY, GEN_PROC_RABBITS,0,1);
     }
 
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
@@ -168,7 +168,7 @@ int main(){
 
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
-                RabbitCheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
+                RabbitCheckConflicts(&worldObjects[i], i, worldObjects,objectsArraySize);
             }
         }
 
@@ -184,7 +184,7 @@ int main(){
 
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
-                FoxCheckConflicts(&worldObjects[i],worldObjects,objectsArraySize);
+                FoxCheckConflicts(&worldObjects[i], i, worldObjects,objectsArraySize);
             }
         }
 
