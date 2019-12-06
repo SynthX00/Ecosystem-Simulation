@@ -94,7 +94,7 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
         //create new fox
         worldObjects[(*outCurrentObjectIndex)] = NewObject("FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
         (*outCurrentObjectIndex)++;
-        fox->timeProcLeft = fox->timeToProc;
+        fox->timeProcLeft = fox->timeToProc + 1;
         //printf("Fox Created at index %d, with the position %d::%d\n",*outCurrentObjectIndex,fox->posX,fox->posY);
     }
 
@@ -130,21 +130,19 @@ void FoxCheckConflicts(ObjectPointer fox, int myIndex, ObjectPointer worldObject
     
     for (int i = 0; i < size; i++){
         
-        if(myIndex == i){
-            continue;
-        }
-
-        if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0){
-            if (worldObjects[i].timeProcLeft > fox->timeProcLeft){
-                /* PrintObject(fox);
-                printf("killed\n");
-                PrintObject(&worldObjects[i]); */
-                worldObjects[i].isDead = 1;
-            }else if(worldObjects[i].timeProcLeft == fox->timeProcLeft && worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){
-                /* PrintObject(fox);
-                printf("killed\n");
-                PrintObject(&worldObjects[i]); */
-                worldObjects[i].isDead = 1;
+        if(myIndex != i){
+            if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0){
+                if (worldObjects[i].timeProcLeft > fox->timeProcLeft){
+                    /* PrintObject(fox);
+                    printf("killed\n");
+                    PrintObject(&worldObjects[i]); */
+                    worldObjects[i].isDead = 1;
+                }else if(worldObjects[i].timeProcLeft == fox->timeProcLeft && worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){
+                    /* PrintObject(fox);
+                    printf("killed\n");
+                    PrintObject(&worldObjects[i]); */
+                    worldObjects[i].isDead = 1;
+                }
             }
         }
     }

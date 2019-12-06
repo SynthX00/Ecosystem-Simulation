@@ -6,6 +6,7 @@ Daniel Rangel up201908562
 daniel.rangel96@outlook.com
 */
 
+#include "omp.h"
 #include "stdlib.h"
 #include "stdio.h"
 #include "object.h"
@@ -17,6 +18,7 @@ void PrintWorldMatrix(int** world, int r, int c){
     for (int i = 0; i < c+2; i++)
         printf("-");
     printf("\n");
+
     for (int i = 0; i < r; i++){
         printf("|");
         for (int j = 0; j < c; j++){
@@ -39,6 +41,7 @@ void PrintWorldMatrix(int** world, int r, int c){
         printf("|");
         printf("\n");
     }
+
     for (int i = 0; i < c+2; i++)
         printf("-");
     printf("\n");
@@ -47,23 +50,25 @@ void PrintWorldMatrix(int** world, int r, int c){
 void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size){
 
     //Clean World
-    for (int i = 0; i < r; i++){
-        for (int j = 0; j < c; j++){
-            world[i][j] = 0;
+    #pragma omp parallel for
+        for (int i = 0; i < r; i++){
+            for (int j = 0; j < c; j++){
+                world[i][j] = 0;
+            }
         }
-    }
     
     //Insert Updated Positions
-    for (int i = 0; i < size; i++){
-        if(worldObjects[i].isDead == 0 && strcmp(worldObjects[i].name, "EMPTY") != 0){
-            if (strcmp(worldObjects[i].name, "ROCK") == 0)
-                world[worldObjects[i].posX][worldObjects[i].posY] = -1;
-            else if(strcmp(worldObjects[i].name, "RABBIT") == 0)
-                world[worldObjects[i].posX][worldObjects[i].posY] = 1;
-            else
-                world[worldObjects[i].posX][worldObjects[i].posY] = 2;
-        }
-    } 
+    #pragma omp parallel for
+        for (int i = 0; i < size; i++){
+            if(worldObjects[i].isDead == 0 && strcmp(worldObjects[i].name, "EMPTY") != 0){
+                if (strcmp(worldObjects[i].name, "ROCK") == 0)
+                    world[worldObjects[i].posX][worldObjects[i].posY] = -1;
+                else if(strcmp(worldObjects[i].name, "RABBIT") == 0)
+                    world[worldObjects[i].posX][worldObjects[i].posY] = 1;
+                else
+                    world[worldObjects[i].posX][worldObjects[i].posY] = 2;
+            }
+        } 
 }
 
 ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPointer worldObjects, int size, int *outNewSize){
@@ -97,7 +102,7 @@ ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPoin
     return worldObjects;
 }
 
-int main(){
+int main(int argc, char *argv[]){
 
     int GEN_PROC_RABBITS;   //number of gens 'till rabbit can procreate
     int GEN_PROC_FOXES;     //... foxes
@@ -107,32 +112,32 @@ int main(){
     int C;                  //... columns
     int N;                  //number of initial objects in the ecosystem
 
+    double timestamp;
 
     scanf("%d %d %d %d %d %d %d", &GEN_PROC_RABBITS, &GEN_PROC_FOXES, &GEN_FOOD_FOXES, &N_GEN, &R, &C, &N);
 
     //create world matrix
     int** world = malloc(R * sizeof(int*));
-    for (int i = 0; i < R; i++){
-        
+    for (int i = 0; i < R; i++)
         world[i] = malloc(C * sizeof(int));
-    }
-    
-    for (int i = 0; i < R; i++){
 
-        for (int j = 0; j < C; j++){        //world:
-                                            //-1    -> cell has a rock
-            world[i][j] = 0;                //0     -> cell is empty
-        }                                   //1     -> cell has a rabbit
-    }                                       //2     -> cell has a fox
+    #pragma omp parallel for
+        for (int i = 0; i < R; i++){
+            for (int j = 0; j < C; j++){        //world:
+                                                //-1    -> cell has a rock
+                world[i][j] = 0;                //0     -> cell is empty
+            }                                   //1     -> cell has a rabbit
+        }                                       //2     -> cell has a fox
 
     //Get world objects
     ObjectPointer worldObjects = malloc((N*2) * sizeof(Object));
     int objectsArraySize = N*2;
     int currentObjectsCount = N;
-
-    for (int i = 0; i < objectsArraySize; i++)
-        worldObjects[i] = InitObject();
     
+    #pragma omp parallel for
+        for (int i = 0; i < objectsArraySize; i++)
+            worldObjects[i] = InitObject();
+
     for (int i = 0; i < N; i++){
         
         char _name[6];
@@ -159,12 +164,15 @@ int main(){
     for(int genCount = 0; genCount < N_GEN; genCount++){
         printf("\nGeneration %d\n", genCount+1);
 
-        //rabbits play 1st
-        for (int i = 0; i < objectsArraySize; i++){
-            if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
-                RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
+        //rabbits' turn
+        //#pragma omp parallel for schedule(dynamic)
+            for (int i = 0; i < objectsArraySize; i++){
+                if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
+                    /* #pragma omp critical
+                        PrintObject(&worldObjects[i]); */
+                    RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
+                }
             }
-        }
 
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
@@ -175,7 +183,7 @@ int main(){
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
         //PrintWorldMatrix(world, R, C);
 
-        //foxes play 2nd
+        //foxes' turn
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
                 FoxTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
