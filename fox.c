@@ -25,6 +25,12 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, in
             fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
         }
 
+        //check starvation
+        if(fox->timeStarveLeft <= 0){
+                fox->isDead = 1;
+                return;
+        }
+        
         FoxCheckCells(fox, 0, world, worldHeight, worldWidth, availableCells, &availableCellCount);
         if (availableCellCount > 0){
             if(fox->age > 0)
@@ -83,13 +89,7 @@ void FoxCheckCells(ObjectPointer fox, int hunt, int** world, int worldHeight, in
 
 void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObjects, int* outCurrentObjectIndex){
 
-    //check starvation
-    if(fox->timeStarveLeft <= 0 && hunt == 0){
-            fox->isDead = 1;
-            return;
-    }
-
-    //check if will procreate this move
+        //check if will procreate this move
     if(fox->timeProcLeft <= 0){
         //create new fox
         worldObjects[(*outCurrentObjectIndex)] = NewObject("FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);

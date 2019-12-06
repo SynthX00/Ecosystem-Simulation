@@ -47,6 +47,10 @@ void PrintWorldMatrix(int** world, int r, int c){
     printf("\n");
 }
 
+void PrintWorldDescription(int** world, ObjectPointer worldObjects, int size){
+    
+}
+
 void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size){
 
     //Clean World
