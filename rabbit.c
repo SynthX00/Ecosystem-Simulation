@@ -2,24 +2,30 @@
 
 void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int currentGen, ObjectPointer worldObjects, int* outCurrentObjectIndex){
 
-    //Are there empty cells around?
-    int availableCellCount;
-    int availableCells[4];
-    RabbitCheckCells(rabbit, world,worldHeight, worldWidth, availableCells, &availableCellCount);
-
-    //If cells are available, Move to an empty cell according to the common criteria
-    if(availableCellCount > 0){
-        //Move
-        if(rabbit->age > 0)
-            RabbitMove(rabbit, availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)], worldObjects, outCurrentObjectIndex);
-    }
-
-    //Endturn
     if(rabbit->age > 0){
+        //Are there empty cells around?
+        int availableCellCount;
+        int availableCells[4];
+        RabbitCheckCells(rabbit, world,worldHeight, worldWidth, availableCells, &availableCellCount);
+
+        //If cells are available, Move to an empty cell according to the common criteria
+        if(availableCellCount > 0){
+            //Move
+            if(rabbit->age > 0){
+                RabbitMove(rabbit, availableCells[((currentGen + rabbit->posX + rabbit->posY)%availableCellCount)], worldObjects, outCurrentObjectIndex);
+            }
+        }
+
+        //Endturn
         rabbit->timeProcLeft--;
         rabbit->timeProcLeft = rabbit->timeProcLeft <= 0 ? 0 : rabbit->timeProcLeft;
     }
     rabbit->age++;
+
+    #pragma omp critical
+    {
+        PrintObject(rabbit);
+    }
 }
 
 void RabbitCheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
@@ -66,13 +72,12 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
     
     //check if will procreate in this move
     if(rabbit->timeProcLeft <= 0){
-        #pragma omp critical(proc)
-        {
-            //create new rabbit
-            worldObjects[(*outCurrentObjectIndex)] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
+        //create new rabbit
+        worldObjects[(*outCurrentObjectIndex)] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
+        //worldObjects[(*outCurrentObjectIndex)].age++;
+        #pragma omp atomic
             (*outCurrentObjectIndex)++;
-            rabbit->timeProcLeft = rabbit->timeToProc + 1;
-        }
+        rabbit->timeProcLeft = rabbit->timeToProc + 1;
     }
 
     int prevX, prevY;
@@ -94,7 +99,11 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
         break;
     }
 
-    //printf("moved from : %d::%d -> %d::%d\n", prevX, prevY, rabbit->posX, rabbit->posY);
+    #pragma omp critical
+    {
+        //PrintObject(rabbit);
+        printf("moved from : %d::%d -> %d::%d\n\n\n", prevX, prevY, rabbit->posX, rabbit->posY);
+    }
 }
 
 ///The Rabbit that has to wait longer to procreate will die off

@@ -178,17 +178,24 @@ int main(int argc, char *argv[]){
     //main loop
     int genCount;
     for(genCount = 0; genCount < N_GEN; genCount++){
-        //printf("\nGeneration %d\n", genCount+1);
-        fprintf(stderr, "GEN: %d\n", genCount);
+        printf("\nGeneration %d\n", genCount+1);
+        //fprintf(stderr, "GEN: %d\n", genCount);
         //rabbits' turn
-        //#pragma omp parallel for schedule(dynamic)
-            for (int i = 0; i < objectsArraySize; i++){
-                if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
-                    /* #pragma omp critical
-                        PrintObject(&worldObjects[i]); */
-                    RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
-                }
+        
+        #pragma omp parallel for
+        for (int i = 0; i < objectsArraySize; i++){
+            if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
+                printf("%d === %d\n", i, currentObjectsCount);
+                RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
             }
+        }
+
+        #pragma omp parallel for
+        for (int i = 0; i < objectsArraySize; i++){
+            if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0 && worldObjects[i].age == 0){
+                worldObjects[i].age++;
+            }
+        }
 
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
@@ -214,8 +221,8 @@ int main(int argc, char *argv[]){
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
 
-        //PrintWorldMatrix(world, R, C);
-        //PrintObjectList(worldObjects, objectsArraySize,0);
+        PrintWorldMatrix(world, R, C);
+        PrintObjectList(worldObjects, objectsArraySize,0);
         
 
         //verify if there's any need to expand the object array
