@@ -63,7 +63,7 @@ void PrintObjectList(ObjectPointer worldObjects, int size, int all){
 
     for (int i = 0; i < size; i++){
         if(all == 0){
-            if(strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
+            if(strcmp(worldObjects[i].name, "EMPTY") != 0 && worldObjects[i].isDead == 0){
                 PrintObject(&worldObjects[i]);
             }
         }

@@ -47,8 +47,19 @@ void PrintWorldMatrix(int** world, int r, int c){
     printf("\n");
 }
 
-void PrintWorldDescription(int** world, ObjectPointer worldObjects, int size){
+void PrintWorldDescription(int** world, int r, int c, ObjectPointer worldObjects, int size){
     
+    for (int y = 0; y < r; y++){
+        for (int x = 0; x < c; x++){
+            
+            for (int i = 0; i < size; i++){
+                
+                if(worldObjects[i].posX == x && worldObjects[i].posY == y && worldObjects[i].isDead == 0)
+                    printf("%s %d %d\n", worldObjects[i].name, y, x);
+                
+            }
+        }
+    }
 }
 
 void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size){
@@ -159,15 +170,16 @@ int main(int argc, char *argv[]){
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
     worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
 
-    printf("Generation 0\n");
-    PrintWorldMatrix(world, R, C);
+    //printf("Generation 0\n");
+    //PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,0);
     //printf("\n%d\n", objectsArraySize);
 
     //main loop
-    for(int genCount = 0; genCount < N_GEN; genCount++){
-        printf("\nGeneration %d\n", genCount+1);
-
+    int genCount;
+    for(genCount = 0; genCount < N_GEN; genCount++){
+        //printf("\nGeneration %d\n", genCount+1);
+        fprintf(stderr, "GEN: %d\n", genCount);
         //rabbits' turn
         //#pragma omp parallel for schedule(dynamic)
             for (int i = 0; i < objectsArraySize; i++){
@@ -202,7 +214,7 @@ int main(int argc, char *argv[]){
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
 
-        PrintWorldMatrix(world, R, C);
+        //PrintWorldMatrix(world, R, C);
         //PrintObjectList(worldObjects, objectsArraySize,0);
         
 
@@ -214,5 +226,17 @@ int main(int argc, char *argv[]){
     
     //PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,1);
+
+    //paralelize with summation
+    int sum = 0;
+    for (int i = 0; i < currentObjectsCount; i++){
+
+        if(worldObjects[i].isDead == 0)
+            sum++;
+    }
+    
+    //PrintObjectList(worldObjects, objectsArraySize,0);
+    printf("%d %d %d %d %d %d %d\n", GEN_PROC_RABBITS, GEN_PROC_FOXES, GEN_FOOD_FOXES, (N_GEN - genCount), R, C, sum);
+    PrintWorldDescription(world, R, C, worldObjects, currentObjectsCount);
     return 0;
 }
