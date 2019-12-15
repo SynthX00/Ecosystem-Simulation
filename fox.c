@@ -2,48 +2,44 @@
 
 void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, int currentGen, ObjectPointer worldObjects, int myIndex, int size){
 
-    if(fox->age == 0){
-        fox->age++;
-        return;
-    }
-
-    //Are any rabbits around me?
-    int availableCellCount;
-    int availableCells[4];
-    FoxCheckCells(fox, 1, world, worldHeight, worldWidth, availableCells, &availableCellCount);
-
-    //If so move and eat one of them
-    if(availableCellCount > 0){
-        //move to hunt
-        if(fox->age > 0)
-            FoxMove(fox, 1, availableCells[((currentGen + fox->posX + fox->posY)%availableCellCount)], worldObjects, myIndex, size);
-    }//Else try to move to an empty space
-    else{
-
-        if(fox->age > 0){
-            fox->timeStarveLeft--;
-            fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
-        }
-
-        //check starvation
-        if(fox->timeStarveLeft <= 0){
-                fox->isDead = 1;
-                return;
-        }
-        
-        FoxCheckCells(fox, 0, world, worldHeight, worldWidth, availableCells, &availableCellCount);
-        if (availableCellCount > 0){
-            if(fox->age > 0)
-                FoxMove(fox, 0, availableCells[((currentGen + fox->posX + fox->posY)%availableCellCount)], worldObjects, myIndex, size);
-        }
-    }
-
-    //Endturn
     if (fox->age > 0){
+        //Are any rabbits around me?
+        int availableCellCount;
+        int availableCells[4];
+        FoxCheckCells(fox, 1, world, worldHeight, worldWidth, availableCells, &availableCellCount);
+
+        //If so move and eat one of them
+        if(availableCellCount > 0){
+            //move to hunt
+            if(fox->age > 0)
+                FoxMove(fox, 1, availableCells[((currentGen + fox->posX + fox->posY)%availableCellCount)], worldObjects, myIndex, size);
+        }//Else try to move to an empty space
+        else{
+
+            if(fox->age > 0){
+                fox->timeStarveLeft--;
+                fox->timeStarveLeft = fox->timeStarveLeft <= 0 ? 0 : fox->timeStarveLeft;
+            }
+
+            //check starvation
+            if(fox->timeStarveLeft <= 0){
+                    fox->isDead = 1;
+                    return;
+            }
+            
+            FoxCheckCells(fox, 0, world, worldHeight, worldWidth, availableCells, &availableCellCount);
+            if (availableCellCount > 0){
+                if(fox->age > 0)
+                    FoxMove(fox, 0, availableCells[((currentGen + fox->posX + fox->posY)%availableCellCount)], worldObjects, myIndex, size);
+            }
+        }
+
+        //Endturn
+    
         fox->timeProcLeft--;
         fox->timeProcLeft = fox->timeProcLeft <= 0 ? 0 : fox->timeProcLeft;
+        fox->age++;
     }
-    fox->age++;
 
 }
 

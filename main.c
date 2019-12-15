@@ -13,7 +13,7 @@ daniel.rangel96@outlook.com
 #include "rabbit.h"
 #include "fox.h"
 
-#define NUMTHREADS 8
+#define NUMTHREADS 16
 
 void PrintWorldMatrix(int** world, int r, int c){
 
@@ -69,7 +69,7 @@ void PrintWorldDescription(int** world, int r, int c, ObjectPointer worldObjects
 void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size){
 
     //Clean World
-    #pragma omp parallel for
+    #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < r; i++){
             for (int j = 0; j < c; j++){
                 world[i][j] = 0;
@@ -77,7 +77,7 @@ void UpdateWorld(int** world, int r, int c, ObjectPointer worldObjects, int size
         }
     
     //Insert Updated Positions
-    #pragma omp parallel for
+    #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < size; i++){
             if(worldObjects[i].isDead == 0 && strcmp(worldObjects[i].name, "EMPTY") != 0){
                 if (strcmp(worldObjects[i].name, "ROCK") == 0)
@@ -140,7 +140,7 @@ int main(int argc, char *argv[]){
     for (int i = 0; i < R; i++)
         world[i] = malloc(C * sizeof(int));
 
-    #pragma omp parallel for
+    #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < R; i++){
             for (int j = 0; j < C; j++){        //world:
                                                 //-1    -> cell has a rock
@@ -153,7 +153,7 @@ int main(int argc, char *argv[]){
     int objectsArraySize = N*2;
     //int currentObjectsCount = N;
     
-    #pragma omp parallel for
+    #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < objectsArraySize; i++)
             worldObjects[i] = InitObject();
 
@@ -179,6 +179,8 @@ int main(int argc, char *argv[]){
     //PrintObjectList(worldObjects, objectsArraySize,0);
     //printf("\n%d\n", objectsArraySize);
 
+    double time = omp_get_wtime();
+
     //main loop
     int genCount;
     for(genCount = 0; genCount < N_GEN; genCount++){
@@ -186,14 +188,14 @@ int main(int argc, char *argv[]){
         //fprintf(stderr, "GEN: %d\n", genCount);
         //rabbits' turn
         
-        #pragma omp parallel for
+        #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
                 RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, i, objectsArraySize);
             }
         }
 
-        #pragma omp parallel for
+        #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0 && worldObjects[i].age == 0){
                 worldObjects[i].age++;
@@ -210,10 +212,17 @@ int main(int argc, char *argv[]){
         //PrintWorldMatrix(world, R, C);
 
         //foxes' turn
-        #pragma omp parallel for
+        #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
                 FoxTurn(&worldObjects[i],world,R,C,genCount, worldObjects, i, objectsArraySize);
+            }
+        }
+
+        #pragma omp parallel for num_threads(NUMTHREADS)
+        for (int i = 0; i < objectsArraySize; i++){
+            if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0 && worldObjects[i].age == 0){
+                worldObjects[i].age++;
             }
         }
 
@@ -225,8 +234,8 @@ int main(int argc, char *argv[]){
 
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
 
-        PrintWorldMatrix(world, R, C);
-        PrintObjectList(worldObjects, objectsArraySize,0);
+        //PrintWorldMatrix(world, R, C);
+        //PrintObjectList(worldObjects, objectsArraySize,0);
         
 
         //verify if there's any need to expand the object array
@@ -234,6 +243,7 @@ int main(int argc, char *argv[]){
         //printf("\n%d   %d\n", objectsArraySize,currentObjectsCount);
     }
 
+    fprintf(stderr, "Total time: %f\n", omp_get_wtime() - time);
     
     //PrintWorldMatrix(world, R, C);
     //PrintObjectList(worldObjects, objectsArraySize,0);
