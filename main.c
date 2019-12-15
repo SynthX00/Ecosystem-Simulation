@@ -13,6 +13,8 @@ daniel.rangel96@outlook.com
 #include "rabbit.h"
 #include "fox.h"
 
+#define NUMTHREADS 8
+
 void PrintWorldMatrix(int** world, int r, int c){
 
     for (int i = 0; i < c+2; i++)
@@ -53,10 +55,12 @@ void PrintWorldDescription(int** world, int r, int c, ObjectPointer worldObjects
         for (int x = 0; x < c; x++){
             
             for (int i = 0; i < size; i++){
-                
-                if(worldObjects[i].posX == x && worldObjects[i].posY == y && worldObjects[i].isDead == 0)
+
+                if(strcmp(worldObjects[i].name, "EMPTY") == 0){
+                    break;
+                }else if(worldObjects[i].posX == x && worldObjects[i].posY == y && worldObjects[i].isDead == 0){
                     printf("%s %d %d\n", worldObjects[i].name, y, x);
-                
+                }
             }
         }
     }
@@ -147,7 +151,7 @@ int main(int argc, char *argv[]){
     //Get world objects
     ObjectPointer worldObjects = malloc((N*2) * sizeof(Object));
     int objectsArraySize = N*2;
-    int currentObjectsCount = N;
+    //int currentObjectsCount = N;
     
     #pragma omp parallel for
         for (int i = 0; i < objectsArraySize; i++)
@@ -178,15 +182,14 @@ int main(int argc, char *argv[]){
     //main loop
     int genCount;
     for(genCount = 0; genCount < N_GEN; genCount++){
-        printf("\nGeneration %d\n", genCount+1);
+        //printf("\nGeneration %d\n", genCount+1);
         //fprintf(stderr, "GEN: %d\n", genCount);
         //rabbits' turn
         
         #pragma omp parallel for
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "RABBIT") == 0 && worldObjects[i].isDead == 0){
-                printf("%d === %d\n", i, currentObjectsCount);
-                RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
+                RabbitTurn(&worldObjects[i],world,R,C,genCount, worldObjects, i, objectsArraySize);
             }
         }
 
@@ -207,9 +210,10 @@ int main(int argc, char *argv[]){
         //PrintWorldMatrix(world, R, C);
 
         //foxes' turn
+        #pragma omp parallel for
         for (int i = 0; i < objectsArraySize; i++){
             if (strcmp(worldObjects[i].name, "FOX") == 0 && worldObjects[i].isDead == 0){
-                FoxTurn(&worldObjects[i],world,R,C,genCount, worldObjects, &currentObjectsCount);
+                FoxTurn(&worldObjects[i],world,R,C,genCount, worldObjects, i, objectsArraySize);
             }
         }
 
@@ -232,11 +236,11 @@ int main(int argc, char *argv[]){
 
     
     //PrintWorldMatrix(world, R, C);
-    //PrintObjectList(worldObjects, objectsArraySize,1);
+    //PrintObjectList(worldObjects, objectsArraySize,0);
 
     //paralelize with summation
     int sum = 0;
-    for (int i = 0; i < currentObjectsCount; i++){
+    for (int i = 0; i < objectsArraySize; i++){
 
         if(worldObjects[i].isDead == 0)
             sum++;
@@ -244,6 +248,6 @@ int main(int argc, char *argv[]){
     
     //PrintObjectList(worldObjects, objectsArraySize,0);
     printf("%d %d %d %d %d %d %d\n", GEN_PROC_RABBITS, GEN_PROC_FOXES, GEN_FOOD_FOXES, (N_GEN - genCount), R, C, sum);
-    PrintWorldDescription(world, R, C, worldObjects, currentObjectsCount);
+    PrintWorldDescription(world, R, C, worldObjects, objectsArraySize);
     return 0;
 }
