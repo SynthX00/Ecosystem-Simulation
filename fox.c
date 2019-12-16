@@ -86,17 +86,18 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
 
     //check if will procreate this move
     if(fox->timeProcLeft <= 0){
-        
-        for (int i = myIndex; i < size; i++)
+        #pragma omp critical
         {
-            if(strcmp(worldObjects[i].name, "EMPTY") == 0){
-                //create new fox
-                #pragma omp critical
-                {
+            for (int i = myIndex; i < size; i++)
+            {
+                if(strcmp(worldObjects[i].name, "EMPTY") == 0){
+                    //create new fox
+                    
                     worldObjects[i] = NewObject("FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
                     fox->timeProcLeft = fox->timeToProc + 1;
+                    
+                    break;
                 }
-                break;
             }
         }
     }

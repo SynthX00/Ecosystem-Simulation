@@ -185,7 +185,7 @@ int main(int argc, char *argv[]){
     int genCount;
     for(genCount = 0; genCount < N_GEN; genCount++){
         //printf("\nGeneration %d\n", genCount+1);
-        //fprintf(stderr, "GEN: %d\n", genCount);
+        //fprintf(stderr, "size: %d\n", objectsArraySize);
 
         //rabbits' turn
         #pragma omp parallel for schedule(dynamic) num_threads(NUMTHREADS)

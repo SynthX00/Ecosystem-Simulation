@@ -67,19 +67,20 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
     
     //check if will procreate in this move
     if(rabbit->timeProcLeft <= 0){
-        
-        //create new rabbit
-        for (int i = myIndex+1; i < size; i++)
+        #pragma omp critical
         {
-            if(strcmp(worldObjects[i].name, "EMPTY") == 0){
-                #pragma omp critical
-                {
+            //create new rabbit
+            for (int i = myIndex+1; i < size; i++)
+            {
+                if(strcmp(worldObjects[i].name, "EMPTY") == 0){
+                    
                     worldObjects[i] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
                     rabbit->timeProcLeft = rabbit->timeToProc + 1;
+                    
+                    break;
                 }
-                break;
-            }
-        } 
+            } 
+        }
     }
 
     switch (direction)
