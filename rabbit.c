@@ -21,11 +21,6 @@ void RabbitTurn(ObjectPointer rabbit, int** world, int worldHeight, int worldWid
         rabbit->timeProcLeft = rabbit->timeProcLeft <= 0 ? 0 : rabbit->timeProcLeft;
         rabbit->age++;
     }
-
-    /* #pragma omp critical
-    {
-        PrintObject(rabbit);
-    } */
 }
 
 void RabbitCheckCells(ObjectPointer rabbit, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
@@ -72,23 +67,21 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
     
     //check if will procreate in this move
     if(rabbit->timeProcLeft <= 0){
-        #pragma omp critical
+        
+        //create new rabbit
+        for (int i = myIndex+1; i < size; i++)
         {
-            //create new rabbit
-            for (int i = myIndex+1; i < size; i++)
-            {
-                if(strcmp(worldObjects[i].name, "EMPTY") == 0){
+            if(strcmp(worldObjects[i].name, "EMPTY") == 0){
+                #pragma omp critical
+                {
                     worldObjects[i] = NewObject("RABBIT", rabbit->posX, rabbit->posY, rabbit->timeToProc, 0,0);
                     rabbit->timeProcLeft = rabbit->timeToProc + 1;
-                    break;
                 }
+                break;
             }
-        }
+        } 
     }
 
-    int prevX, prevY;
-    prevX = rabbit->posX; prevY = rabbit->posY;
-    
     switch (direction)
     {
     case 0:
@@ -104,12 +97,6 @@ void RabbitMove(ObjectPointer rabbit, int direction, ObjectPointer worldObjects,
         rabbit->posX--;
         break;
     }
-
-    /* #pragma omp critical
-    {
-        //PrintObject(rabbit);
-        printf("moved from : %d::%d -> %d::%d\n\n\n", prevX, prevY, rabbit->posX, rabbit->posY);
-    } */
 }
 
 ///The Rabbit that has to wait longer to procreate will die off
@@ -120,7 +107,6 @@ void RabbitCheckConflicts(ObjectPointer rabbit, int myIndex, ObjectPointer world
         if(myIndex != i){
             if((worldObjects[i].posX == rabbit->posX) && (worldObjects[i].posY == rabbit->posY) && (worldObjects[i].isDead) == 0){
                 if (worldObjects[i].timeProcLeft >= rabbit->timeProcLeft){
-                    //printf("rabbit %d::%d is killed\n", worldObjects[i].posX, worldObjects[i].posY);
                     worldObjects[i].isDead = 1;
                 }
             }

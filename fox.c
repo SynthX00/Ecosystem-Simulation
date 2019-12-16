@@ -45,7 +45,6 @@ void FoxTurn(ObjectPointer fox, int** world, int worldHeight, int worldWidth, in
 
 void FoxCheckCells(ObjectPointer fox, int hunt, int** world, int worldHeight, int worldWidth, int* outAvailableCells, int* outCellCount){
     
-    //int outAvailableCells = malloc(4*sizeof(int));
     int index = 0;
 
     //north
@@ -87,16 +86,17 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
 
     //check if will procreate this move
     if(fox->timeProcLeft <= 0){
-        #pragma omp critical
+        
+        for (int i = myIndex; i < size; i++)
         {
-            for (int i = myIndex; i < size; i++)
-            {
-                if(strcmp(worldObjects[i].name, "EMPTY") == 0){
-                    //create new fox
+            if(strcmp(worldObjects[i].name, "EMPTY") == 0){
+                //create new fox
+                #pragma omp critical
+                {
                     worldObjects[i] = NewObject("FOX", fox->posX, fox->posY, fox->timeToProc, fox->timeToStarve, 0);
                     fox->timeProcLeft = fox->timeToProc + 1;
-                    break;
                 }
+                break;
             }
         }
     }
@@ -117,8 +117,6 @@ void FoxMove(ObjectPointer fox, int hunt, int direction, ObjectPointer worldObje
         break;
     }
 
-    //printf("Fox new position %d::%d\n", fox->posX, fox->posY);
-
     if (hunt == 1){
         for (int i = 0; i < size; i++){
             if(strcmp(worldObjects[i].name, "EMPTY") == 0){
@@ -138,14 +136,8 @@ void FoxCheckConflicts(ObjectPointer fox, int myIndex, ObjectPointer worldObject
         if(myIndex != i){
             if((worldObjects[i].posX == fox->posX) && (worldObjects[i].posY == fox->posY) && worldObjects[i].isDead == 0){
                 if (worldObjects[i].timeProcLeft > fox->timeProcLeft){
-                    /* PrintObject(fox);
-                    printf("killed\n");
-                    PrintObject(&worldObjects[i]); */
                     worldObjects[i].isDead = 1;
                 }else if(worldObjects[i].timeProcLeft == fox->timeProcLeft && worldObjects[i].timeStarveLeft <= fox->timeStarveLeft){
-                    /* PrintObject(fox);
-                    printf("killed\n");
-                    PrintObject(&worldObjects[i]); */
                     worldObjects[i].isDead = 1;
                 }
             }
