@@ -13,7 +13,7 @@ daniel.rangel96@outlook.com
 #include "rabbit.h"
 #include "fox.h"
 
-#define NUMTHREADS 8
+#define NUMTHREADS 1
 
 void PrintWorldMatrix(int** world, int r, int c){
 
@@ -121,6 +121,29 @@ ObjectPointer CheckWorldObjectsArray(int worldWidth, int worldHeight, ObjectPoin
     return worldObjects;
 }
 
+ObjectPointer CleanDeadObjects(ObjectPointer worldObjects, int size){
+
+    ObjectPointer _worldobjects = malloc(sizeof(Object) * size);
+    for (int i = 0; i < size; i++)
+        _worldobjects[i] = InitObject();
+    
+
+    for (int i = 0; i < size; i++) //original array
+    {
+        if(worldObjects[i].isDead == 0){
+            for (int j = 0; j < size; j++) //secondary array
+            {
+                if(strcmp(_worldobjects[j].name, "EMPTY") == 0){
+                    memcpy(&_worldobjects[j],&worldObjects[i], sizeof(Object));
+                    break;
+                }
+            }
+        }
+    }
+    
+    return _worldobjects;
+}
+
 int main(int argc, char *argv[]){
 
     int GEN_PROC_RABBITS;   //number of gens 'till rabbit can procreate
@@ -149,14 +172,23 @@ int main(int argc, char *argv[]){
         }                                       //2     -> cell has a fox
 
     //Get world objects
-    ObjectPointer worldObjects = malloc((N*2) * sizeof(Object));
-    int objectsArraySize = N*2;
+    //ObjectPointer worldObjects = malloc((N*2) * sizeof(Object));
+    //int objectsArraySize = N*2;
     //int currentObjectsCount = N;
     
-    #pragma omp parallel for num_threads(NUMTHREADS)
+    /*new worldobjects implementation*/
+    ObjectPointer worldObjects = malloc((R*C) * sizeof(Object));
+    int objectsArraySize = R*C;
+
+    //init worldObjects
+    for (int i = 0; i < objectsArraySize; i++)
+        worldObjects[i]=InitObject();
+    
+
+    /* #pragma omp parallel for num_threads(NUMTHREADS)
         for (int i = 0; i < objectsArraySize; i++)
             worldObjects[i] = InitObject();
-
+ */
     for (int i = 0; i < N; i++){
         
         char _name[6];
@@ -172,7 +204,8 @@ int main(int argc, char *argv[]){
     }
 
     UpdateWorld(world, R, C, worldObjects, N); // Update world map
-    worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
+    //worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
+    worldObjects = CleanDeadObjects(worldObjects, objectsArraySize);
 
     //printf("Generation 0\n");
     //PrintWorldMatrix(world, R, C);
@@ -185,7 +218,8 @@ int main(int argc, char *argv[]){
     int genCount;
     for(genCount = 0; genCount < N_GEN; genCount++){
         //printf("\nGeneration %d\n", genCount+1);
-        //fprintf(stderr, "size: %d\n", objectsArraySize);
+        fprintf(stderr, "gen: %d\n", genCount);
+        time = omp_get_wtime();
 
         //rabbits' turn
         #pragma omp parallel for schedule(dynamic) num_threads(NUMTHREADS)
@@ -231,24 +265,25 @@ int main(int argc, char *argv[]){
                 FoxCheckConflicts(&worldObjects[i], i, worldObjects,objectsArraySize);
             }
         }
-
+        worldObjects = CleanDeadObjects(worldObjects, objectsArraySize);
         UpdateWorld(world, R, C, worldObjects, objectsArraySize); // Update world map
 
         //PrintWorldMatrix(world, R, C);
         //PrintObjectList(worldObjects, objectsArraySize,0);
         //verify if there's any need to expand the object array
-        worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
+        //worldObjects = CheckWorldObjectsArray(R, C, worldObjects, objectsArraySize, &objectsArraySize);
+        fprintf(stderr, "time: %f\n", omp_get_wtime() - time);
     }
 
     fprintf(stderr, "Total time: %f\n", omp_get_wtime() - time);
     
     //PrintWorldMatrix(world, R, C);
-    //PrintObjectList(worldObjects, objectsArraySize,0);
+    //PrintObjectList(worldObjects, objectsArraySize,1);
 
     int sum = 0;
     for (int i = 0; i < objectsArraySize; i++){
         if(strcmp(worldObjects[i].name, "EMPTY") == 0)
-            continue;
+            break;
         if(worldObjects[i].isDead == 0)
             sum++;
     }
